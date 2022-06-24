@@ -1,0 +1,1746 @@
+<html lang="en"><!-- Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/charts/c3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 06:22:58 GMT --><head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="static/vendors/feather/feather.css">
+  <link rel="stylesheet" href="static/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="static/vendors/c3/c3.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="static/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="static/images/favicon.png">
+</head>
+
+<body class="sidebar-dark sidebar-icon-only">
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <a class="navbar-brand brand-logo me-5" href="../../index.html"><img src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-light.svg" class="me-2" alt="logo"></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-mini.svg" alt="logo"></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+              </a><a href="/backpage"><img src="static/images/faces/home.png" alt="profile"></a>
+
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options selected" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles light"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper ps" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    <i class="input-helper"></i></label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    <i class="input-helper"></i></label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    <i class="input-helper"></i></label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked="">
+                      Schedule meeting for next week
+                    <i class="input-helper"></i></label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked="">
+                      Project review
+                    <i class="input-helper"></i></label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">build a js based app</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 ps-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="static/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../widgets/widgets.html">
+              <i class="icon-cog menu-icon"></i>
+              <span class="menu-title">Widgets</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">UI Elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/accordions.html">Accordions</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/buttons.html">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/badges.html">Badges</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/breadcrumbs.html">Breadcrumbs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/modals.html">Modals</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/progress.html">Progress bar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/pagination.html">Pagination</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/tabs.html">Tabs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/tooltips.html">Tooltips</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+              <i class="icon-image menu-icon"></i>
+              <span class="menu-title">Advanced UI</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/dragula.html">Dragula</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/clipboard.html">Clipboard</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/context-menu.html">Context menu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/slider.html">Sliders</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/carousel.html">Carousel</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/colcade.html">Colcade</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/loaders.html">Loaders</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Form elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../forms/basic_elements.html">Basic Elements</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/advanced_elements.html">Advanced Elements</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/validation.html">Validation</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/wizard.html">Wizard</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
+              <i class="icon-loader menu-icon"></i>
+              <span class="menu-title">Editors</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="editors">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../forms/text_editor.html">Text editors</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/code_editor.html">Code editors</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="chartjs.html">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="morris.html">Morris</a></li>
+                <li class="nav-item"> <a class="nav-link" href="flot-chart.html">Flot</a></li>
+                <li class="nav-item"> <a class="nav-link" href="google-charts.html">Google charts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="sparkline.html">Sparkline js</a></li>
+                <li class="nav-item"> <a class="nav-link" href="c3.html">C3 charts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="chartist.html">Chartists</a></li>
+                <li class="nav-item"> <a class="nav-link" href="justGage.html">JustGage</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Tables</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/data-table.html">Data table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/js-grid.html">Js-grid</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/sortable-table.html">Sortable table</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ui-features/popups.html">
+              <i class="icon-open menu-icon"></i>
+              <span class="menu-title">Popups</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ui-features/notifications.html">
+              <i class="icon-esc menu-icon"></i>
+              <span class="menu-title">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Icons</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../icons/flag-icons.html">Flag icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/mdi.html">Mdi icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/font-awesome.html">Font Awesome</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/simple-line-icon.html">Simple line icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/themify.html">Themify icons</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#maps" aria-expanded="false" aria-controls="maps">
+              <i class="icon-map menu-icon"></i>
+              <span class="menu-title">Maps</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="maps">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../maps/mapael.html">Mapael</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../maps/vector-map.html">Vector Map</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../maps/google-maps.html">Google Map</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/login-2.html"> Login 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/register-2.html"> Register 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/lock-screen.html"> Lockscreen </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Error pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">General Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="general-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/blank-page.html"> Blank Page </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/profile.html"> Profile </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/faq.html"> FAQ </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/faq-2.html"> FAQ 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/news-grid.html"> News grid </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/timeline.html"> Timeline </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/search-results.html"> Search Results </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/portfolio.html"> Portfolio </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#e-commerce" aria-expanded="false" aria-controls="e-commerce">
+              <i class="icon-tag menu-icon"></i>
+              <span class="menu-title">E-commerce</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="e-commerce">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/invoice.html"> Invoice </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/pricing-table.html"> Pricing Table </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/orders.html"> Orders </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/email.html">
+              <i class="icon-mail menu-icon"></i>
+              <span class="menu-title">E-mail</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/calendar.html">
+              <i class="icon-watch menu-icon"></i>
+              <span class="menu-title">Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/todo.html">
+              <i class="icon-align-right menu-icon"></i>
+              <span class="menu-title">Todo List</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/gallery.html">
+              <i class="icon-image menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+
+
+
+
+
+<!--      &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+      <div class="main-panel">
+        <div class="content-wrapper">
+
+
+
+
+
+
+<!--<div class="row">-->
+
+<!--차트 시작점-->
+<!--   <div class="row">-->
+
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div id="다음버튼2" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                      <div class="carousel-item active">
+                        <br>
+                  <h4 class="card-title">원화 지표</h4>
+                        <br>
+                  <div id="kb_bank_line" class="c3" style="max-height: 320px; position: relative;"><svg width="351.34375" height="320" style="overflow: hidden;"><defs><clipPath id="c3-1645447267130-clip"><rect width="350.34375" height="236"></rect></clipPath><clipPath id="c3-1645447267130-clip-xaxis"><rect x="-31" y="-20" width="412.34375" height="100"></rect></clipPath><clipPath id="c3-1645447267130-clip-yaxis"><rect x="-29" y="-4" width="20" height="260"></rect></clipPath><clipPath id="c3-1645447267130-clip-grid"><rect width="350.34375" height="236"></rect></clipPath><clipPath id="c3-1645447267130-clip-subchart"><rect width="350.34375" height="0"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="175.171875" y="118" style="opacity: 0;"></text><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267130-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267130-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="236" style="visibility: hidden;"></line></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267130-clip)" class="c3-chart"><g class="c3-stanford-elements"><g class="c3-stanford-lines" style="shape-rendering: geometricprecision;"></g><g class="c3-stanford-texts"></g><g class="c3-stanford-regions"></g></g><g class="c3-event-rects" style="fill-opacity: 0;"><rect class="c3-event-rect" x="0" y="0" width="350.34375" height="236"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-예수금추이" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-예수금추이 c3-bars c3-bars-예수금추이" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-대출금추이" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-대출금추이 c3-bars c3-bars-대출금추이" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-예수금추이" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-예수금추이 c3-lines c3-lines-예수금추이"><path class=" c3-shape c3-shape c3-line c3-line-예수금추이" d="M4,155.6164259927798L90,134.40703971119135L176,207.57942238267148L262,20.583333333333343L347,204.75150421179302" style="stroke: rgb(88, 216, 163); opacity: 1;"></path></g><g class=" c3-shapes c3-shapes-예수금추이 c3-areas c3-areas-예수금추이"><path class=" c3-shape c3-shape c3-area c3-area-예수금추이" d="M 4 155.6164259927798" style="fill: rgb(88, 216, 163); opacity: 0.2;"></path></g><g class=" c3-selected-circles c3-selected-circles-예수금추이"></g><g class=" c3-shapes c3-shapes-예수금추이 c3-circles c3-circles-예수금추이" style="cursor: pointer;"><circle shape-rendering="" class=" c3-shape c3-shape-0 c3-circle c3-circle-0" cx="4" cy="155.6164259927798" r="2.5" style="color: rgb(88, 216, 163); opacity: 1;"></circle><circle shape-rendering="" class=" c3-shape c3-shape-1 c3-circle c3-circle-1" cx="90" cy="134.40703971119135" r="2.5" style="color: rgb(88, 216, 163); opacity: 1;"></circle><circle shape-rendering="" class=" c3-shape c3-shape-2 c3-circle c3-circle-2" cx="176" cy="207.57942238267148" r="2.5" style="color: rgb(88, 216, 163); opacity: 1;"></circle><circle shape-rendering="" class=" c3-shape c3-shape-3 c3-circle c3-circle-3" cx="262" cy="20.583333333333343" r="2.5" style="color: rgb(88, 216, 163); opacity: 1;"></circle><circle shape-rendering="" class="c3-shape c3-shape-4 c3-circle c3-circle-4" cx="347" cy="204.75150421179302" r="2.5" style="color: rgb(88, 216, 163); opacity: 1;"></circle></g></g><g class="c3-chart-line c3-target c3-target-대출금추이" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-대출금추이 c3-lines c3-lines-대출금추이"><path class=" c3-shape c3-shape c3-line c3-line-대출금추이" d="M4,216.41666666666666L90,172.93742478941036L176,145.36522262334537L262,154.55595667870037L347,92.34175691937428" style="stroke: rgba(237, 28, 36, 0.6); opacity: 1;"></path></g><g class=" c3-shapes c3-shapes-대출금추이 c3-areas c3-areas-대출금추이"><path class=" c3-shape c3-shape c3-area c3-area-대출금추이" d="M 4 216.41666666666666" style="fill: rgba(237, 28, 36, 0.6); opacity: 0.2;"></path></g><g class=" c3-selected-circles c3-selected-circles-대출금추이"></g><g class=" c3-shapes c3-shapes-대출금추이 c3-circles c3-circles-대출금추이" style="cursor: pointer;"><circle shape-rendering="" class=" c3-shape c3-shape-0 c3-circle c3-circle-0" cx="4" cy="216.41666666666666" r="2.5" style="color: rgba(237, 28, 36, 0.6); opacity: 1;"></circle><circle shape-rendering="" class=" c3-shape c3-shape-1 c3-circle c3-circle-1" cx="90" cy="172.93742478941036" r="2.5" style="color: rgba(237, 28, 36, 0.6); opacity: 1;"></circle><circle shape-rendering="" class=" c3-shape c3-shape-2 c3-circle c3-circle-2" cx="176" cy="145.36522262334537" r="2.5" style="color: rgba(237, 28, 36, 0.6); opacity: 1;"></circle><circle shape-rendering="" class=" c3-shape c3-shape-3 c3-circle c3-circle-3" cx="262" cy="154.55595667870037" r="2.5" style="color: rgba(237, 28, 36, 0.6); opacity: 1;"></circle><circle shape-rendering="" class="c3-shape c3-shape-4 c3-circle c3-circle-4" cx="347" cy="92.34175691937428" r="2.5" style="color: rgba(237, 28, 36, 0.6); opacity: 1;"></circle></g></g></g><g class="c3-chart-arcs" transform="translate(175.171875,113)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-예수금추이  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-예수금추이"></g></g><g class="c3-chart-text c3-target c3-target-대출금추이  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-대출금추이"></g></g></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267130-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267130-clip-xaxis)" transform="translate(0,236)" style="visibility: visible; opacity: 1;"><text class="c3-axis-x-label" transform="" style="text-anchor: end;" x="350.34375" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(4, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2016</tspan></text></g><g class="tick" transform="translate(90, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2017</tspan></text></g><g class="tick" transform="translate(176, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2018</tspan></text></g><g class="tick" transform="translate(262, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2019</tspan></text></g><g class="tick" transform="translate(347, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2020</tspan></text></g><path class="domain" d="M0,6V0H350.34375V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267130-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 1;"><text class="c3-axis-y-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="1.2em"></text><g class="tick" transform="translate(0,224)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">3</tspan></text></g><g class="tick" transform="translate(0,206)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">3.5</tspan></text></g><g class="tick" transform="translate(0,188)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">4</tspan></text></g><g class="tick" transform="translate(0,171)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">4.5</tspan></text></g><g class="tick" transform="translate(0,153)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">5</tspan></text></g><g class="tick" transform="translate(0,135)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">5.5</tspan></text></g><g class="tick" transform="translate(0,118)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">6</tspan></text></g><g class="tick" transform="translate(0,100)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">6.5</tspan></text></g><g class="tick" transform="translate(0,82)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">7</tspan></text></g><g class="tick" transform="translate(0,65)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">7.5</tspan></text></g><g class="tick" transform="translate(0,47)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">8</tspan></text></g><g class="tick" transform="translate(0,29)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">8.5</tspan></text></g><g class="tick" transform="translate(0,12)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">9</tspan></text></g><path class="domain" d="M-6,1H0V236H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(350.34375,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(0,236)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,213)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,189)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,166)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,142)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,119)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,95)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,72)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,48)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,25)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V236H6"></path></g></g><g transform="translate(0,300)"><g class="c3-legend-item c3-legend-item-예수금추이" style="visibility: visible; cursor: pointer;"><text x="109.671875" y="9" style="pointer-events: none;">예수금추이</text><rect class="c3-legend-item-event" x="95.671875" y="-5" width="85" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="93.671875" y1="4" x2="103.671875" y2="4" stroke-width="10" style="stroke: rgb(88, 216, 163); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-대출금추이" style="visibility: visible; cursor: pointer;"><text x="194.671875" y="9" style="pointer-events: none;">대출금추이</text><rect class="c3-legend-item-event" x="180.671875" y="-5" width="75" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="178.671875" y1="4" x2="188.671875" y2="4" stroke-width="10" style="stroke: rgba(237, 28, 36, 0.6); pointer-events: none;"></line></g></g><text class="c3-title" x="175.671875" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none; top: 186.312px; left: 557.5px;"><table class="c3-tooltip"><tbody><tr><th colspan="2">2020</th></tr><tr class="c3-tooltip-name--대출금추이"><td class="name"><span style="background-color:rgba(237,28,36,0.6)"></span>대출금추이</td><td class="value">6.7</td></tr><tr class="c3-tooltip-name--예수금추이"><td class="name"><span style="background-color:rgba(88,216,163,1)"></span>예수금추이</td><td class="value">3.52</td></tr></tbody></table></div></div>
+                        </div>
+
+                      <div class="carousel-item">
+                        <br>
+                  <h4 class="card-title">수익성 지표</h4>
+                        <br>
+                  <div id="kb_bank_pie" class="c3" style="max-height: 320px; position: relative;"><svg width="712" height="320" style="overflow: hidden;"><defs><clipPath id="c3-1645447267214-clip"><rect width="712" height="266"></rect></clipPath><clipPath id="c3-1645447267214-clip-xaxis"><rect x="-31" y="-20" width="774" height="70"></rect></clipPath><clipPath id="c3-1645447267214-clip-yaxis"><rect x="-29" y="-4" width="20" height="290"></rect></clipPath><clipPath id="c3-1645447267214-clip-grid"><rect width="712" height="266"></rect></clipPath><clipPath id="c3-1645447267214-clip-subchart"><rect width="712" height="0"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="356" y="133" style="opacity: 0;"></text><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267214-clip)" class="c3-regions" style="visibility: hidden;"></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267214-clip-grid)" class="c3-grid" style="visibility: hidden;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="266" style="visibility: hidden;"></line></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267214-clip)" class="c3-chart"><g class="c3-stanford-elements"><g class="c3-stanford-lines" style="shape-rendering: geometricprecision;"></g><g class="c3-stanford-texts"></g><g class="c3-stanford-regions"></g></g><g class="c3-event-rects" style="fill-opacity: 0;"><rect class="c3-event-rect" x="0" y="0" width="712" height="266"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-국민" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-국민 c3-bars c3-bars-국민" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-신한" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-신한 c3-bars c3-bars-신한" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-우리" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-우리 c3-bars c3-bars-우리" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-하나" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-하나 c3-bars c3-bars-하나" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-국민" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-국민 c3-lines c3-lines-국민"></g><g class=" c3-shapes c3-shapes-국민 c3-areas c3-areas-국민"></g><g class=" c3-selected-circles c3-selected-circles-국민"></g><g class=" c3-shapes c3-shapes-국민 c3-circles c3-circles-국민" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-신한" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-신한 c3-lines c3-lines-신한"></g><g class=" c3-shapes c3-shapes-신한 c3-areas c3-areas-신한"></g><g class=" c3-selected-circles c3-selected-circles-신한"></g><g class=" c3-shapes c3-shapes-신한 c3-circles c3-circles-신한" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-우리" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-우리 c3-lines c3-lines-우리"></g><g class=" c3-shapes c3-shapes-우리 c3-areas c3-areas-우리"></g><g class=" c3-selected-circles c3-selected-circles-우리"></g><g class=" c3-shapes c3-shapes-우리 c3-circles c3-circles-우리" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-하나" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-하나 c3-lines c3-lines-하나"></g><g class=" c3-shapes c3-shapes-하나 c3-areas c3-areas-하나"></g><g class=" c3-selected-circles c3-selected-circles-하나"></g><g class=" c3-shapes c3-shapes-하나 c3-circles c3-circles-하나" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(356,128)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text><g class="c3-chart-arc c3-target c3-target-국민"><g class=" c3-shapes c3-shapes-국민 c3-arcs c3-arcs-국민"><path class=" c3-shape c3-shape c3-arc c3-arc-국민" transform="scale(1,1)" d="M-83.19648319610266,-88.68430066139443A121.6,121.6,0,0,1,-2.233755761644772e-14,-121.6L0,0Z" style="fill: rgb(88, 216, 163); cursor: pointer;"></path></g><text dy=".35em" class="" transform="translate(-35.78848547597146,-90.45762934842026)" style="opacity: 1; text-anchor: middle; pointer-events: none;">12.0%</text></g><g class="c3-chart-arc c3-target c3-target-신한"><g class=" c3-shapes c3-shapes-신한 c3-arcs c3-arcs-신한"><path class=" c3-shape c3-shape c3-arc c3-arc-신한" transform="scale(1,1)" d="M7.445852538815907e-15,-121.6A121.6,121.6,0,0,1,105.21331743160404,60.96489018309247L0,0Z" style="fill: rgba(237, 28, 36, 0.6); cursor: pointer;"></path></g><text dy=".35em" class="" transform="translate(84.28502243462059,-48.5739991476459)" style="opacity: 1; text-anchor: middle; pointer-events: none;">33.4%</text></g><g class="c3-chart-arc c3-target c3-target-우리"><g class=" c3-shapes c3-shapes-우리 c3-arcs c3-arcs-우리"><path class=" c3-shape c3-shape c3-arc c3-arc-우리" transform="scale(1,1)" d="M-85.46066740316644,86.50453356330732A121.6,121.6,0,0,1,-83.19648319610266,-88.68430066139443L0,0Z" style="fill: rgb(167, 179, 253); cursor: pointer;"></path></g><text dy=".35em" class="" transform="translate(-97.27187637567158,-1.257166001794204)" style="opacity: 1; text-anchor: middle; pointer-events: none;">25.6%</text></g><g class="c3-chart-arc c3-target c3-target-하나"><g class=" c3-shapes c3-shapes-하나 c3-arcs c3-arcs-하나"><path class=" c3-shape c3-shape c3-arc c3-arc-하나" transform="scale(1,1)" d="M105.21331743160404,60.96489018309247A121.6,121.6,0,0,1,-85.46066740316644,86.50453356330732L0,0Z" style="fill: rgba(4, 189, 254, 0.6); cursor: pointer;"></path></g><text dy=".35em" class="" transform="translate(12.914739282754338,96.41891883473119)" style="opacity: 1; text-anchor: middle; pointer-events: none;">29.0%</text></g></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-국민  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-국민"></g></g><g class="c3-chart-text c3-target c3-target-신한  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-신한"></g></g><g class="c3-chart-text c3-target c3-target-우리  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-우리"></g></g><g class="c3-chart-text c3-target c3-target-하나  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-하나"></g></g></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267214-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267214-clip-xaxis)" transform="translate(0,266)" style="visibility: visible; opacity: 0;"><text class="c3-axis-x-label" transform="" x="712" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(7, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><g class="tick" transform="translate(356, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">1</tspan></text></g><g class="tick" transform="translate(706, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2</tspan></text></g><path class="domain" d="M0,6V0H712V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267214-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 0;"><text class="c3-axis-y-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,245)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,221)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">100</tspan></text></g><g class="tick" transform="translate(0,196)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">200</tspan></text></g><g class="tick" transform="translate(0,172)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">300</tspan></text></g><g class="tick" transform="translate(0,148)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">400</tspan></text></g><g class="tick" transform="translate(0,124)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">500</tspan></text></g><g class="tick" transform="translate(0,100)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">600</tspan></text></g><g class="tick" transform="translate(0,76)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">700</tspan></text></g><g class="tick" transform="translate(0,52)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">800</tspan></text></g><g class="tick" transform="translate(0,27)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">900</tspan></text></g><g class="tick" transform="translate(0,3)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1000</tspan></text></g><path class="domain" d="M-6,1H0V266H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(712,0)" style="visibility: hidden; opacity: 0;"><text class="c3-axis-y2-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,266)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,240)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,213)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,187)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,160)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,134)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,107)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,81)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,54)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,28)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V266H6"></path></g></g><g transform="translate(0,300)"><g class="c3-legend-item c3-legend-item-국민" style="visibility: visible; cursor: pointer;"><text x="277" y="9" style="pointer-events: none;">국민</text><rect class="c3-legend-item-event" x="263" y="-5" width="49" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="261" y1="4" x2="271" y2="4" stroke-width="10" style="stroke: rgb(88, 216, 163); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-신한" style="visibility: visible; cursor: pointer;"><text x="326" y="9" style="pointer-events: none;">신한</text><rect class="c3-legend-item-event" x="312" y="-5" width="49" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="310" y1="4" x2="320" y2="4" stroke-width="10" style="stroke: rgba(237, 28, 36, 0.6); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-우리" style="visibility: visible; cursor: pointer;"><text x="375" y="9" style="pointer-events: none;">우리</text><rect class="c3-legend-item-event" x="361" y="-5" width="49" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="359" y1="4" x2="369" y2="4" stroke-width="10" style="stroke: rgb(167, 179, 253); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-하나" style="visibility: visible; cursor: pointer;"><text x="424" y="9" style="pointer-events: none;">하나</text><rect class="c3-legend-item-event" x="410" y="-5" width="39" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="408" y1="4" x2="418" y2="4" stroke-width="10" style="stroke: rgba(4, 189, 254, 0.6); pointer-events: none;"></line></g></g><text class="c3-title" x="356" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                        </div>
+
+                      <div class="carousel-item">
+                        <br>
+                  <h4 class="card-title">건전성 지표</h4>
+                        <br>
+                  <div id="kb_bank_bar" class="c3" style="max-height: 320px; position: relative;"><svg width="712" height="320" style="overflow: hidden;"><defs><clipPath id="c3-1645447267239-clip"><rect width="711" height="236"></rect></clipPath><clipPath id="c3-1645447267239-clip-xaxis"><rect x="-31" y="-20" width="773" height="100"></rect></clipPath><clipPath id="c3-1645447267239-clip-yaxis"><rect x="-29" y="-4" width="20" height="260"></rect></clipPath><clipPath id="c3-1645447267239-clip-grid"><rect width="711" height="236"></rect></clipPath><clipPath id="c3-1645447267239-clip-subchart"><rect width="711" height="0"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="355.5" y="118" style="opacity: 0;"></text><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267239-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267239-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="236" style="visibility: hidden;"></line></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267239-clip)" class="c3-chart"><g class="c3-stanford-elements"><g class="c3-stanford-lines" style="shape-rendering: geometricprecision;"></g><g class="c3-stanford-texts"></g><g class="c3-stanford-regions"></g></g><g class="c3-event-rects" style="fill-opacity: 0;"><rect class="c3-event-rect" x="0" y="0" width="711" height="236"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-고정이하여신비율" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-고정이하여신비율 c3-bars c3-bars-고정이하여신비율" style="cursor: pointer;"><path class=" c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 22.230000000000004,236 L22.230000000000004,22.36363636363637 L72,22.36363636363637 L72,236 z" style="stroke: rgb(88, 216, 163); fill: rgb(88, 216, 163); opacity: 1;"></path><path class=" c3-shape c3-shape-1 c3-bar c3-bar-1" d="M 164.23000000000002,236 L164.23000000000002,55.06307977736552 L214,55.06307977736552 L214,236 z" style="stroke: rgb(88, 216, 163); fill: rgb(88, 216, 163); opacity: 1;"></path><path class=" c3-shape c3-shape-2 c3-bar c3-bar-2" d="M 306.23,236 L306.23,124.82189239332098 L356,124.82189239332098 L356,236 z" style="stroke: rgb(88, 216, 163); fill: rgb(88, 216, 163); opacity: 1;"></path><path class=" c3-shape c3-shape-3 c3-bar c3-bar-3" d="M 448.23,236 L448.23,148.80148423005565 L498,148.80148423005565 L498,236 z" style="stroke: rgb(88, 216, 163); fill: rgb(88, 216, 163); opacity: 1;"></path><path class=" c3-shape c3-shape-4 c3-bar c3-bar-4" d="M 590.23,236 L590.23,166.2411873840445 L640,166.2411873840445 L640,236 z" style="stroke: rgb(88, 216, 163); fill: rgb(88, 216, 163); opacity: 1;"></path></g></g><g class="c3-chart-bar c3-target c3-target-BIS" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-BIS c3-bars c3-bars-BIS" style="cursor: pointer;"><path class=" c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 72,236 L72,202.66836734693877 L121.77,202.66836734693877 L121.77,236 z" style="stroke: rgb(0, 106, 103); fill: rgb(0, 106, 103); opacity: 1;"></path><path class=" c3-shape c3-shape-1 c3-bar c3-bar-1" d="M 214,236 L214,202.42857142857144 L263.77,202.42857142857144 L263.77,236 z" style="stroke: rgb(0, 106, 103); fill: rgb(0, 106, 103); opacity: 1;"></path><path class=" c3-shape c3-shape-2 c3-bar c3-bar-2" d="M 356,236 L356,201.88358070500928 L405.77,201.88358070500928 L405.77,236 z" style="stroke: rgb(0, 106, 103); fill: rgb(0, 106, 103); opacity: 1;"></path><path class=" c3-shape c3-shape-3 c3-bar c3-bar-3" d="M 498,236 L498,202.42857142857144 L547.77,202.42857142857144 L547.77,236 z" style="stroke: rgb(0, 106, 103); fill: rgb(0, 106, 103); opacity: 1;"></path><path class=" c3-shape c3-shape-4 c3-bar c3-bar-4" d="M 640,236 L640,198.19944341372914 L689.77,198.19944341372914 L689.77,236 z" style="stroke: rgb(0, 106, 103); fill: rgb(0, 106, 103); opacity: 1;"></path></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-고정이하여신비율" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-고정이하여신비율 c3-lines c3-lines-고정이하여신비율"></g><g class=" c3-shapes c3-shapes-고정이하여신비율 c3-areas c3-areas-고정이하여신비율"></g><g class=" c3-selected-circles c3-selected-circles-고정이하여신비율"></g><g class=" c3-shapes c3-shapes-고정이하여신비율 c3-circles c3-circles-고정이하여신비율" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-BIS" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-BIS c3-lines c3-lines-BIS"></g><g class=" c3-shapes c3-shapes-BIS c3-areas c3-areas-BIS"></g><g class=" c3-selected-circles c3-selected-circles-BIS"></g><g class=" c3-shapes c3-shapes-BIS c3-circles c3-circles-BIS" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(355.5,113)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-고정이하여신비율  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-고정이하여신비율"></g></g><g class="c3-chart-text c3-target c3-target-BIS  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-BIS"></g></g></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267239-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267239-clip-xaxis)" transform="translate(0,236)" style="visibility: visible; opacity: 1;"><text class="c3-axis-x-label" transform="" x="711" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(72, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2016</tspan></text></g><g class="tick" transform="translate(214, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2017</tspan></text></g><g class="tick" transform="translate(356, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2018</tspan></text></g><g class="tick" transform="translate(498, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2019</tspan></text></g><g class="tick" transform="translate(640, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">2020</tspan></text></g><path class="domain" d="M0,6V0H711V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267239-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 1;"><text class="c3-axis-y-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,236)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,215)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,193)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,171)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,149)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,128)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,106)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,84)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,62)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,40)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,19)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1</tspan></text></g><path class="domain" d="M-6,1H0V236H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(711,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,236)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,213)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,189)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,166)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,142)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,119)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,95)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,72)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,48)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,25)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V236H6"></path></g></g><g transform="translate(0,300)"><g class="c3-legend-item c3-legend-item-고정이하여신비율" style="visibility: visible; cursor: pointer;"><text x="293.37890625" y="9" style="pointer-events: none;">고정이하여신비율</text><rect class="c3-legend-item-event" x="279.37890625" y="-5" width="121" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="277.37890625" y1="4" x2="287.37890625" y2="4" stroke-width="10" style="stroke: rgb(88, 216, 163); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-BIS" style="visibility: visible; cursor: pointer;"><text x="414.37890625" y="9" style="pointer-events: none;">BIS</text><rect class="c3-legend-item-event" x="400.37890625" y="-5" width="32.2421875" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="398.37890625" y1="4" x2="408.37890625" y2="4" stroke-width="10" style="stroke: rgb(0, 106, 103); pointer-events: none;"></line></g></g><text class="c3-title" x="356" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                        </div>
+
+
+
+                      <a class="carousel-control-prev" href="#다음버튼2" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                    </a>
+                    <a class="carousel-control-next" href="#다음버튼2" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+<!--           차트끝-------------------------------------------------->
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div id="다음버튼우리" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                      <div class="carousel-item active">
+                        <br>
+                  <h4 class="card-title">경영성과평가지표</h4>
+                        <br>
+                        <center><img src="/static/images/faces/국민.png" alt="user" class="img-thumbnail border-dark" width="300" height="200"></center>
+                      </div>
+
+                      <div class="carousel-item">
+                        <br>
+                  <h4 class="card-title">4대은행통합지표</h4>
+                        <br>
+                  <center><img src="/static/images/faces/radar_total.png" alt="user" class="img-thumbnail border-dark" width="300" height="200"></center>
+                      </div>
+
+
+                      <a class="carousel-control-prev" href="#다음버튼우리" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                    </a>
+                    <a class="carousel-control-next" href="#다음버튼우리" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <br>
+                  <h4 class="card-title">은행 모바일 뱅킹 이용자비율</h4>
+                  <br>
+                      <div id="kb-donut-chart" class="c3" style="max-height: 320px; position: relative;"><svg width="363" height="320" style="overflow: hidden;"><defs><clipPath id="c3-1645447267278-clip"><rect width="363" height="266"></rect></clipPath><clipPath id="c3-1645447267278-clip-xaxis"><rect x="-31" y="-20" width="425" height="70"></rect></clipPath><clipPath id="c3-1645447267278-clip-yaxis"><rect x="-29" y="-4" width="20" height="290"></rect></clipPath><clipPath id="c3-1645447267278-clip-grid"><rect width="363" height="266"></rect></clipPath><clipPath id="c3-1645447267278-clip-subchart"><rect width="363" height="0"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="181.5" y="133" style="opacity: 0;"></text><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267278-clip)" class="c3-regions" style="visibility: hidden;"></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267278-clip-grid)" class="c3-grid" style="visibility: hidden;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="266" style="visibility: hidden;"></line></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267278-clip)" class="c3-chart"><g class="c3-stanford-elements"><g class="c3-stanford-lines" style="shape-rendering: geometricprecision;"></g><g class="c3-stanford-texts"></g><g class="c3-stanford-regions"></g></g><g class="c3-event-rects" style="fill-opacity: 0;"><rect class="c3-event-rect" x="0" y="0" width="363" height="266"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-우리은행앱이용자  " style="pointer-events: none;"><g class=" c3-shapes c3-shapes-우리은행앱이용자 c3-bars c3-bars-우리은행앱이용자" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-국민은행" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-국민은행 c3-bars c3-bars-국민은행" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-신한은행" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-신한은행 c3-bars c3-bars-신한은행" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-하나은행" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-하나은행 c3-bars c3-bars-하나은행" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-우리은행앱이용자  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-우리은행앱이용자 c3-lines c3-lines-우리은행앱이용자"></g><g class=" c3-shapes c3-shapes-우리은행앱이용자 c3-areas c3-areas-우리은행앱이용자"></g><g class=" c3-selected-circles c3-selected-circles-우리은행앱이용자"></g><g class=" c3-shapes c3-shapes-우리은행앱이용자 c3-circles c3-circles-우리은행앱이용자" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-국민은행" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-국민은행 c3-lines c3-lines-국민은행"></g><g class=" c3-shapes c3-shapes-국민은행 c3-areas c3-areas-국민은행"></g><g class=" c3-selected-circles c3-selected-circles-국민은행"></g><g class=" c3-shapes c3-shapes-국민은행 c3-circles c3-circles-국민은행" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-신한은행" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-신한은행 c3-lines c3-lines-신한은행"></g><g class=" c3-shapes c3-shapes-신한은행 c3-areas c3-areas-신한은행"></g><g class=" c3-selected-circles c3-selected-circles-신한은행"></g><g class=" c3-shapes c3-shapes-신한은행 c3-circles c3-circles-신한은행" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-하나은행" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-하나은행 c3-lines c3-lines-하나은행"></g><g class=" c3-shapes c3-shapes-하나은행 c3-areas c3-areas-하나은행"></g><g class=" c3-selected-circles c3-selected-circles-하나은행"></g><g class=" c3-shapes c3-shapes-하나은행 c3-circles c3-circles-하나은행" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(181.5,128)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 1;">이용자수 비율</text><g class="c3-chart-arc c3-target c3-target-우리은행앱이용자  "><g class=" c3-shapes c3-shapes-우리은행앱이용자 c3-arcs c3-arcs-우리은행앱이용자"><path class=" c3-shape c3-shape c3-arc c3-arc-우리은행앱이용자" transform="" style="fill: rgb(0, 123, 190); cursor: pointer;" d="M-109.43841824160691,53.00747695160675A121.6,121.6,0,0,1,-80.77708643320611,-90.89346680241846L-48.466251859923666,-54.536080081451075A72.96,72.96,0,0,0,-65.66305094496414,31.804486170964047Z"></path></g><text dy=".35em" class="" transform="translate(-95.40601224827958,-19.002400555748974)" style="opacity: 1; text-anchor: middle; pointer-events: none;">20.6%</text></g><g class="c3-chart-arc c3-target c3-target-국민은행"><g class=" c3-shapes c3-shapes-국민은행 c3-arcs c3-arcs-국민은행"><path class=" c3-shape c3-shape c3-arc c3-arc-국민은행" transform="" style="fill: rgb(250, 184, 19); cursor: pointer;" d="M7.445852538815907e-15,-121.6A121.6,121.6,0,0,1,91.16324228053251,80.4725000040444L54.69794536831951,48.28350000242664A72.96,72.96,0,0,0,4.467511523289544e-15,-72.96Z"></path></g><text dy=".35em" class="" transform="translate(88.67381304622789,-40.00441575429672)" style="opacity: 1; text-anchor: middle; pointer-events: none;">36.5%</text></g><g class="c3-chart-arc c3-target c3-target-신한은행"><g class=" c3-shapes c3-shapes-신한은행 c3-arcs c3-arcs-신한은행"><path class=" c3-shape c3-shape c3-arc c3-arc-신한은행" transform="" style="fill: rgb(19, 88, 153); cursor: pointer;" d="M91.16324228053251,80.4725000040444A121.6,121.6,0,0,1,-109.43841824160691,53.00747695160675L-65.66305094496414,31.804486170964047A72.96,72.96,0,0,0,54.69794536831951,48.28350000242664Z"></path></g><text dy=".35em" class="" transform="translate(-13.195814776991455,96.38085324571128)" style="opacity: 1; text-anchor: middle; pointer-events: none;">31.3%</text></g><g class="c3-chart-arc c3-target c3-target-하나은행"><g class=" c3-shapes c3-shapes-하나은행 c3-arcs c3-arcs-하나은행"><path class=" c3-shape c3-shape c3-arc c3-arc-하나은행" transform="" style="fill: rgb(41, 132, 120); cursor: pointer;" d="M-80.77708643320611,-90.89346680241846A121.6,121.6,0,0,1,8.566493821908749e-14,-121.6L5.13989629314525e-14,-72.96A72.96,72.96,0,0,0,-48.466251859923666,-54.536080081451075Z"></path></g><text dy=".35em" class="" transform="translate(-34.566640273308124,-90.93154447283798)" style="opacity: 1; text-anchor: middle; pointer-events: none;">11.6%</text></g></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-우리은행앱이용자  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-우리은행앱이용자"></g></g><g class="c3-chart-text c3-target c3-target-국민은행  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-국민은행"></g></g><g class="c3-chart-text c3-target c3-target-신한은행  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-신한은행"></g></g><g class="c3-chart-text c3-target c3-target-하나은행  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-하나은행"></g></g></g></g><g clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267278-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267278-clip-xaxis)" transform="translate(0, 266)" style="visibility: visible; opacity: 0;"><text class="c3-axis-x-label" transform="" style="text-anchor: end;" x="363" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(182, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H363V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://127.0.0.1:5000/gggopage#c3-1645447267278-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 0;"><text class="c3-axis-y-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="1.2em"></text><g class="tick" transform="translate(0, 172)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">5000000</tspan></text></g><g class="tick" transform="translate(0, 242)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">3000000</tspan></text></g><g class="tick" transform="translate(0, 207)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">4000000</tspan></text></g><g class="tick" transform="translate(0, 137)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">6000000</tspan></text></g><g class="tick" transform="translate(0, 103)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">7000000</tspan></text></g><g class="tick" transform="translate(0, 68)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">8000000</tspan></text></g><g class="tick" transform="translate(0, 33)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">9000000</tspan></text></g><path class="domain" d="M-6,1H0V266H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(363, 0)" style="visibility: hidden; opacity: 0;"><text class="c3-axis-y2-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(0, 266)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0, 240)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0, 213)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0, 187)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0, 160)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0, 134)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0, 107)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0, 81)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0, 54)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0, 28)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V266H6"></path></g></g><g transform="translate(0, 300)"><g class="c3-legend-item c3-legend-item-우리은행앱이용자" style="visibility: visible; cursor: pointer;"><text x="24.671875" y="9" style="pointer-events: none;">우리은행앱이용자</text><rect class="c3-legend-item-event" x="10.671875" y="-5" width="121" height="20" style="fill-opacity: 0;"></rect><line class="c3-legend-item-tile" x1="8.671875" y1="4" x2="18.671875" y2="4" stroke-width="10" style="stroke: rgb(0, 123, 190); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-국민은행" style="visibility: visible; cursor: pointer;"><text x="145.671875" y="9" style="pointer-events: none;">국민은행</text><rect class="c3-legend-item-event" x="131.671875" y="-5" style="fill-opacity: 0;" width="73" height="20"></rect><line class="c3-legend-item-tile" x1="129.671875" y1="4" x2="139.671875" y2="4" stroke-width="10" style="stroke: rgb(250, 184, 19); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-신한은행" style="visibility: visible; cursor: pointer;"><text x="218.671875" y="9" style="pointer-events: none;">신한은행</text><rect class="c3-legend-item-event" x="204.671875" y="-5" style="fill-opacity: 0;" width="73" height="20"></rect><line class="c3-legend-item-tile" x1="202.671875" y1="4" x2="212.671875" y2="4" stroke-width="10" style="stroke: rgb(19, 88, 153); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-하나은행" style="visibility: visible; cursor: pointer;"><text x="291.671875" y="9" style="pointer-events: none;">하나은행</text><rect class="c3-legend-item-event" x="277.671875" y="-5" style="fill-opacity: 0;" width="63" height="20"></rect><line class="c3-legend-item-tile" x1="275.671875" y1="4" x2="285.671875" y2="4" stroke-width="10" style="stroke: rgb(41, 132, 120); pointer-events: none;"></line></g></g><text class="c3-title" x="181.5" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+<!--          &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+   <div class="row">
+
+
+
+
+                      <div class="col-lg-6 grid-margin stretch-card">
+                        <div class="card">
+
+
+                          <div class="card-body">
+                            <br href = 'https://www.youtube.com/user/OPENKBSTAR/featured' >
+                            <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>
+                             <div id="다음버튼" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+
+                                   <a class="carousel-control-prev" href="#다음버튼" role="button" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                </a>
+                                <a class="carousel-control-next" href="#다음버튼" role="button" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </a>
+
+                              <div class="carousel-inner">
+
+                                <br></br>
+
+
+                           <div class="carousel-item active">
+                             <div class="row">
+                               <div class="col-sm-4">
+                                    <center><a href="https://www.youtube.com/watch?v=R-IJMpPNTFc">
+                                      <img src="/static/images/faces/kb_영상1.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                                    </a></center>
+                                 <center><br><b><p class="text-dark">[KB X aespa] 리브 마이웨이, Liiv Next (Full ver.)</p></b></br></center>
+                                  </div>
+
+                            <div class="col-sm-4">
+                                    <center><a href="https://www.youtube.com/watch?v=qz7qmgyK0NI">
+                                      <img src="/static/images/faces/kb_영상2.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                                    </a></center>
+                              <center><br><b><p class="text-dark">Bank KB Kookmin Bersama Bintang Dunia BTS Hadir di Indonesia</p></b></br></center>
+                                  </div>
+                            <div class="col-sm-4">
+                                    <center><a href="https://www.youtube.com/watch?v=QPM9NZHsKs8">
+                                      <img src="/static/images/faces/kb_영상3.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                                    </a></center>
+                              <center><br><b><p class="text-dark">오십의 맞춤법</p></b></br></center>
+                                  </div>
+                               </div>
+
+
+
+
+
+          <!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+                             </div>
+
+
+
+                           <div class="carousel-item">
+                             <div class="row">
+                               <div class="col-sm-4">
+                                    <center><a href="https://www.youtube.com/watch?v=HbcPms1qHbQ">
+                                      <img src="/static/images/faces/kb_영상4.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                                    </a></center>
+                                 <center><br><b><p class="text-dark">서른의 맞춤법, 그 두 번째 이야기</p></b></br></center>
+                                  </div>
+                            <div class="col-sm-4">
+                                    <center><a href="https://www.youtube.com/watch?v=yt6ZMHc84MM">
+                                      <img src="/static/images/faces/kb_영상5.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                                    </a></center>
+                                  <center><br><b><p class="text-dark">더 새로워진 모바일뱅크, KB스타뱅킹</p></b></br></center>
+                                  </div>
+                            <div class="col-sm-4">
+                                    <center><a href="https://www.youtube.com/watch?v=IUHWIv_iAFw">
+                                      <img src="/static/images/faces/kb_영상6.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                                    </a></center>
+                              <center><br><b><p class="text-dark">KB스타뱅킹 - 자동로그인, 홈화면, 자산관리(15s)</p></b></br></center>
+                                  </div>
+                               </div>
+
+
+
+
+
+
+          <!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+                             </div>
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                          <div class="row">
+                                <div class="col-lg-12">
+                                      <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-dribbble"></i>홈페이지 & SNS</button>
+          <!--                              <br></br>-->
+                                  <div class="card">
+
+                                    <div class="card-body">
+
+
+
+                                      <div id="video-gallery" class="row lightGallery">
+                                        <a class="col-sm-3" href="https://www.kbstar.com/">
+                                          <img src="/static/images/faces/kb_sb.png" alt="image" class="img-thumbnail border-warning" width="60" height="60" >
+
+                                        </a>
+                                        <a class="col-sm-3" href="https://ko-kr.facebook.com/kbkookminbank/">
+                                          <img src="/static/images/faces/페이스북.png" alt="image" width="60" height="60">
+
+                                        </a>
+                                        <a class="col-sm-3" href="www.instagram.com › kbkookminbank">
+                                          <img src="/static/images/faces/인스타그램.png" alt="image" width="60" height="60">
+
+                                        </a>
+                                        <a class="col-sm-3" href="https://blog.naver.com/youngkbblog">
+                                          <img src="/static/images/faces/블로그.png" alt="image" width="60" height="60">
+
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                        </div>
+                      </div>
+                      </div>
+                        </div>
+
+
+
+
+                      <div class="col-lg-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <br></br>
+          <!--                  <h4 class="card-title">WORDCLOUD</h4>-->
+                              <br><center><img src = "/static/images/faces/국민은행키워드.png" alt="user" width="350" height="350"></center></br>
+          <!--                  <div id="c3-bar-chart"></div>-->
+                          </div>
+                        </div>
+                      </div>
+          </div>
+<!-- &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+<!--                    <div class="carousel-inner">-->
+
+
+                      <!--------------------  --------------------------------------------->
+<!--                      <div class="carousel-item active">-->
+                         <div class="row">
+                           <div class="col">
+                         <img src="/static/images/faces/kb_sb.png" alt="user" width="50" height="50">
+                        <div class="col-sm-1">
+
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <center><a href="https://obank.kbstar.com/quics?page=C016613&amp;cc=b061496:b061645&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=DP01000821&amp;QSL=F&amp;prcode=DP01000821">
+                            <img src="/static/images/faces/kb_추천상품1(2).png" alt="user" class="img-thumbnail border-warning" width="200" height="250">
+                          </a></center>
+                          <center><br><b><p class="text-warning">내맘대로적금</p></b></br></center>
+                        </div>
+                        <div class="col-sm-2">
+                          <center><a href="https://obank.kbstar.com/quics?page=C016613&amp;cc=b061496:b061645&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=DP01001242&amp;QSL=F&amp;prcode=DP010012420">
+                            <img src="/static/images/faces/kb_추천상품2.jpg" alt="user" class="img-thumbnail border-warning" width="200" height="250"></a></center><a href="https://obank.kbstar.com/quics?page=C016613&amp;cc=b061496:b061645&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=DP01001242&amp;QSL=F&amp;prcode=DP010012420">
+                          </a><center>
+                            <br><b><p class="text-warning">마이핏적금</p></b></br></center>
+                        </div>
+                        <div class="col-sm-2">
+                          <center><a href="https://obank.kbstar.com/quics?page=C041164"><img src="/static/images/faces/kb_추천상품3.jpeg" alt="user" class="img-thumbnail border-warning" width="200" height="250"></a></center><a href="https://obank.kbstar.com/quics?page=C041164">
+                          </a><center>
+                            <br><b><p class="text-warning">kb국민 만능ISA</p></b></br></center>
+                        </div>
+                        <div class="col-sm-2">
+                          <center><a href="https://obank.kbstar.com/quics?page=C016613&amp;cc=b061496:b061645&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=DP01000940&amp;%EB%85%B8%EB%93%9C%EC%BD%94%EB%93%9C=00007&amp;prcode=DP01000940"><img src="/static/images/faces/kb_추천상품4.png" alt="user" class="img-thumbnail border-warning" width="200" height="250"></a></center><a href="https://obank.kbstar.com/quics?page=C016613&amp;cc=b061496:b061645&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=DP01000940&amp;%EB%85%B8%EB%93%9C%EC%BD%94%EB%93%9C=00007&amp;prcode=DP01000940">
+                          </a><center>
+                          <br><b><p class="text-warning">young,youth적금</p></b></br></center>
+                        </div>
+                        <div class="col-sm-2">
+                        <center><a href="https://obank.kbstar.com/quics?page=C103425&amp;%EB%85%B8%EB%93%9C%EC%BD%94%EB%93%9C=00019&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=LN20000051&amp;prcode=LN20000051&amp;cc=b061479%3Ab061589"><img src="/static/images/faces/kb_추천상품5.png" alt="user" class="img-thumbnail border-warning" width="200" height="250"></a></center><a href="https://obank.kbstar.com/quics?page=C103425&amp;%EB%85%B8%EB%93%9C%EC%BD%94%EB%93%9C=00019&amp;%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C=LN20000051&amp;prcode=LN20000051&amp;cc=b061479%3Ab061589">
+                        </a><center><br><b><p class="text-warning">내집마련디딤돌대출</p></b></br></center>
+                        </div>
+                         </div>
+
+
+
+<!--                      </div>-->
+
+<!--                    </div>-->
+<!--                    <a class="carousel-control-prev" href="#detailedReports" role="button" data-bs-slide="prev">-->
+<!--                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--&lt;!&ndash;                      <span class="sr-only">Previous</span>&ndash;&gt;-->
+<!--                    </a>-->
+<!--                    <a class="carousel-control-next" href="#detailedReports" role="button" data-bs-slide="next">-->
+<!--                      <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--&lt;!&ndash;                      <span class="sr-only">Next</span>&ndash;&gt;-->
+<!--                    </a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                      <!--------------------  --------------------------------------------->
+
+
+<!--            -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+<div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports4" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                      <!--------------------  --------------------------------------------->
+                      <div class="carousel-item">
+                        <div class="row">
+                          <div class="card-body">
+                                <h4 class="card-title">예금 상품</h4>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Category</th>
+                          <th>Production</th>
+                          <th>Detail</th>
+                          <th>Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                        {%  for v in MY_KB1 %}
+                                        <tr>
+                                             <td class="font-weight-medium"><div class="badge badge-warning">{{v[1]}}</div></td>
+                                             <td><div onclick="location.href='{{v[5]}}'" style="cursor:pointer;">{{v[2]}}</td>
+                                             <td><div onclick="location.href='{{v[5]}}'" style="cursor:pointer;">{{v[3]}}</td>
+                                             <td>{{v[4]}}%</td>
+                                        </tr>
+                                        {% endfor %}
+
+
+                      </tbody>
+
+
+
+                    </table>
+                      </div>
+                          </div>
+                        </div>
+                      </div>
+
+<!-------------------- 서민대출상품 --------------------------------------------->
+                      <div class="carousel-item active">
+                        <div class="row">
+                          <div class="card-body">
+                  <h4 class="card-title">적금 상품</h4>
+
+                     <table class="table table-hover table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Category</th>
+                          <th>Production</th>
+                          <th>Detail</th>
+                          <th>Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                        {%  for v in MY_KB2 %}
+                                        <tr>
+                                             <td class="font-weight-medium"><div class="badge badge-success">{{v[1]}}</div></td>
+                                             <td><div onclick="location.href='{{v[5]}}'" style="cursor:pointer;">{{v[2]}}</td>
+                                             <td><div onclick="location.href='{{v[5]}}'" style="cursor:pointer;">{{v[3]}}</td>
+                                             <td>{{v[4]}}%</td>
+                                        </tr>
+                                        {% endfor %}
+
+
+                      </tbody>
+
+
+
+                    </table>
+
+                      </div>
+                        </div>
+                     </div>
+
+ <!--------------------  --------------------------------------------->
+                      <div class="carousel-item">
+                        <div class="row">
+                          <div class="card-body">
+                              <h4 class="card-title">대출 상품</h4>
+
+                  <div class="table-responsive">
+                    <table class="table table-hover table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Category</th>
+                          <th>Production</th>
+                          <th>Detail</th>
+                          <th>Loan</th>
+                          <th>Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                                        {%  for v in MY_KB3 %}
+                                        <tr>
+                                             <td class="font-weight-medium"><div class="badge badge-danger">{{v[1]}}</div></td>
+                                             <td><div onclick="location.href='{{v[6]}}'" style="cursor:pointer;">{{v[2]}}</td>
+                                             <td><div onclick="location.href='{{v[6]}}'" style="cursor:pointer;">{{v[3]}}</td>
+                                             <td><div onclick="location.href='{{v[6]}}'" style="cursor:pointer;">{{v[4]}}</td>
+                                             <td>{{v[5]}}%</td>
+                                        </tr>
+                                        {% endfor %}
+
+
+                      </tbody>
+
+
+
+                    </table>
+
+
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <!--------------------  --------------------------------------------->
+
+                        </div>
+                          <a class="carousel-control-prev" href="#detailedReports4" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!--                      <span class="sr-only">Previous</span>-->
+                          </a>
+                          <a class="carousel-control-next" href="#detailedReports4" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <!--                      <span class="sr-only">Next</span>-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                      <!--------------------  --------------------------------------------->
+
+
+
+
+
+<!--          은행이벤트 시작점-->
+
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports3" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                      <!--------------------  --------------------------------------------->
+
+                      <!--------------------  --------------------------------------------->
+
+                      <!--------------------  --------------------------------------------->
+                      <div class="carousel-item active">
+                        <div class="row">
+                          <div class="card-body">
+                  <h4 class="card-title">국민은행 이벤트</h4>
+                  <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>
+                            #
+                          </th>
+                          <th>
+                            이벤트 제목
+                          </th>
+                          <th>
+                            기간
+                          </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            「 KB퇴직연금 가입하고, 타~이거!」대고객 이벤트
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.16 ~ 2022.03.31
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            바로ERP 무료가입 일석이조(一石二鳥) 이벤트!!
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.14 ~ 2022.03.18
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            황금호랑이를 잡아라! 「KB마이데이터 황금레이스」
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.07 ~ 2022.02.28
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            「KB마이데이터」KB마이데이터 통합페이지
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.07 ~ 2022.02.28
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            2022년 기업고객 해외송금 비범한 혜택 !
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.07 ~ 2022.03.31
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                        </div>
+                      </div>
+                      <!--------------------  --------------------------------------------->
+                       <div class="carousel-item">
+                        <div class="row">
+                          <div class="card-body">
+                  <h4 class="card-title">국민은행 이벤트</h4>
+                  <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>
+                            #
+                          </th>
+                          <th>
+                            이벤트 제목
+                          </th>
+                          <th>
+                            기간
+                          </th>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td>
+                            6
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            「My저금통」과 함께하는 #이만큼챌린지 시즌2
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.07 ~ 2022.02.28
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            7
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            「KB마이데이터 보너스 이벤트」
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.07 ~ 2022.02.28
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            8
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            지금 「KB TWO테크 외화정기예금」 가입하면, 환율우대 100% 혜택 제공!
+                            </div>
+                          </td>
+                          <td>
+                            2022.02.04 ~ 2022.03.31
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            9
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            비대면 「주택자금대출」 (전세/담보) 통합 이벤트
+                            </div>
+                          </td>
+                          <td>
+                            2022.01.28 ~ 2022.04.29
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            10
+                          </td>
+                          <td>
+                            <div onclick="location.href='https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b03297'"
+                            style="cursor:pointer;">
+                            KB청춘마루 2월 프로그램 안내
+                            </div>
+                          </td>
+                          <td>
+                            2022.01.27 ~ 2022.02.28
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                        </div>
+                      </div>
+                      <!--------------------  --------------------------------------------->
+
+      </div>
+                          <a class="carousel-control-prev" href="#detailedReports3" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!--                      <span class="sr-only">Previous</span>-->
+                          </a>
+                          <a class="carousel-control-next" href="#detailedReports3" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <!--                      <span class="sr-only">Next</span>-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!--  --------------------------------   은행이벤트끝  ------------------------------------   -->
+
+
+     </div>
+<!--     </div>-->
+<!--</div>-->
+
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted &amp; made with <i class="ti-heart text-danger ms-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="static/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="static/vendors/d3/d3.min.js"></script>
+  <script src="static/vendors/c3/c3.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+
+
+  <script src="static/js/off-canvas.js"></script>
+  <script src="static/js/hoverable-collapse.js"></script>
+  <script src="static/js/template.js"></script>
+  <script src="static/js/settings.js"></script>
+  <script src="static/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+<!--  <script src="static/js/c3.js"></script>-->
+  <!-- End custom js for this page-->
+      <script>(function($) {
+'use strict';
+
+
+<!----원화 차트--->
+
+  var c3LineChart = c3.generate({
+    bindto: '#kb_bank_line',
+    data: {
+       x : '년도',
+      columns: [
+        ['년도' ,2016 , 2017 , 2018 , 2019 , 2020 ],
+        ['예수금추이', 4.48 , 6.27, 6.35 , 9.46 , 8.03],
+        ['대출금추이', 6.50, 6.54, 9.70, 4.39, 8.52]
+      ]
+    },
+
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+
+<!------수익성 차트------->
+
+  var c3PieChart = c3.generate({
+    bindto: '#kb_bank_pie',
+    data: {
+        x : '연도',
+      columns: [
+        ['연도' ,2016 , 2017 , 2018 , 2019 , 2020 ],
+        ['매출액 영업이익률',0.0670,0.1385,0.1811,0.1578,0.1355],
+        ['매출액 순이익률', 0.0912,0.1187,0.1280,0.1148,0.0969],
+
+      ],
+      type: 'spline',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: [ 'rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', '#A7B3FD' , 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+<!---------건전성 차트---->
+
+  var shinhan_bar = c3.generate({
+    bindto: '#kb_bank_bar',
+    data: {
+      x : '년도',
+      columns: [
+        ['년도' ,2016 , 2017 , 2018 , 2019 , 2020 ],
+        ['고정이하여신비율' , 0.74, 0.58 , 0.48 , 0.37 , 0.28],
+        ['BIS'  ,  0.1632, 0.1601 , 0.1552 ,  0.1585 , 0.1778]
+      ],
+      type: 'bar'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', '#006A67', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    bar: {
+      width: {
+        ratio: 0.7 // this makes bar width 50% of length between ticks
+      }
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+  var c3LineChart = c3.generate({
+    bindto: '#c3-line-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+  setTimeout(function() {
+    c3LineChart.load({
+      columns: [
+        ['data1', 230, 190, 300, 500, 300, 400]
+      ]
+    });
+  }, 1000);
+
+  setTimeout(function() {
+    c3LineChart.load({
+      columns: [
+        ['data3', 130, 150, 200, 300, 200, 100]
+      ]
+    });
+  }, 1500);
+
+  setTimeout(function() {
+    c3LineChart.unload({
+      ids: 'data1'
+    });
+  }, 2000);
+
+   var shinhanchart5 = c3.generate({
+   bindto: '#c3-kb_고정이하여신비율',
+   data: {
+      columns: [
+        ['국민은행_고정이하여신비율' , 0.98,0.83,0.5,0.4,0.32]
+      ]
+    }
+  });
+
+  var shinhanchart4 = c3.generate({
+   bindto: '#c3-kb_총자산',
+   data: {
+      columns: [
+        ['국민_총자산' , 310682727  , 316295461 ,     317392879   , 332492630   ,    358257710]
+      ]
+    }
+  });
+
+  var shinhan_bar = c3.generate({
+    bindto: '#kb_bar_chart',
+    data: {
+      columns: [
+        ['국민_고정이하여신비율' ,0.98,0.83,0.5,0.4,0.32],
+        ['국민_bis',0.1529,0.1540,0.1565,0.154,0.1734],
+        ['국민_roa', 0.41,0.48,0.62,0.43,0.36]
+      ],
+      type: 'bar'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    bar: {
+      width: {
+        ratio: 0.7 // this makes bar width 50% of length between ticks
+      }
+    }
+  });
+
+
+
+new Chart(document.getElementById("radar-chart"), {
+    type: 'radar',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "1950",
+          fill: true,
+          backgroundColor: "rgba(179,181,198,0.2)",
+          borderColor: "rgba(179,181,198,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(179,181,198,1)",
+          data: [8.77,55.61,21.69,6.62,6.82]
+        }, {
+          label: "2050",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          data: [25.48,54.16,7.61,8.06,4.45]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Distribution in % of world population'
+      }
+    }
+});
+
+  var c3SplineChart = c3.generate({
+    bindto: '#c3-spline-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      type: 'spline'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+  var c3BarChart = c3.generate({
+    bindto: '#c3-bar-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      type: 'bar'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    bar: {
+      width: {
+        ratio: 0.7 // this makes bar width 50% of length between ticks
+      }
+    }
+  });
+
+  setTimeout(function() {
+    c3BarChart.load({
+      columns: [
+        ['data3', 130, -150, 200, 300, -200, 100]
+      ]
+    });
+  }, 1000);
+
+  var c3StepChart = c3.generate({
+    bindto: '#c3-step-chart',
+    data: {
+      columns: [
+        ['data1', 300, 350, 300, 0, 0, 100],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      types: {
+        data1: 'step',
+        data2: 'area-step'
+      }
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+  var c3PieChart = c3.generate({
+    bindto: '#c3-pie-chart',
+    data: {
+      // iris data from R
+      columns: [
+        ['data1', 30],
+        ['data2', 120],
+      ],
+      type: 'pie',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: ['#6153F9', '#8E97FC', '#A7B3FD']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+  setTimeout(function() {
+    c3PieChart.load({
+      columns: [
+        ["Income", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
+        ["Outcome", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+        ["Revenue", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
+      ]
+    });
+  }, 1500);
+
+  setTimeout(function() {
+    c3PieChart.unload({
+      ids: 'data1'
+    });
+    c3PieChart.unload({
+      ids: 'data2'
+    });
+  }, 2500);
+  var c3DonutChart = c3.generate({
+    bindto: '#c3-donut-chart',
+    data: {
+      columns: [
+        ['data1', 30],
+        ['data2', 120],
+      ],
+      type: 'donut',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    donut: {
+      title: "Iris Petal Width"
+    }
+  });
+
+  setTimeout(function() {
+    c3DonutChart.load({
+      columns: [
+        ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
+        ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+        ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
+      ]
+    });
+  }, 1500);
+
+  setTimeout(function() {
+    c3DonutChart.unload({
+      ids: 'data1'
+    });
+    c3DonutChart.unload({
+      ids: 'data2'
+    });
+  }, 2500);
+
+
+})(jQuery);</script>
+
+        <script>var c3DonutChart = c3.generate({
+    bindto: '#kb-donut-chart',
+    data: {
+      columns: [
+        ['국민은행앱이용자', 9263888],
+        ['국민', 51780000],
+      ],
+      type: 'donut',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: ['#FAB813', '#808080','#135899', '#007BBE' , '#298478'
+]
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    donut: {
+      title: "이용자수비율"
+    }
+  });
+<!--9,263,888         7,944,796       5,230,918     2,934,000-->
+  setTimeout(function() {
+    c3DonutChart.load({
+      columns: [
+        ["신한은행", 7944796],
+        ["우리은행", 5230918],
+        ["하나은행", 2934000],
+      ]
+    });
+  }, 6000);
+
+  setTimeout(function() {
+    c3DonutChart.unload({
+      ids: '국민'
+    });
+  }, 6000);
+</script>
+
+<!-- Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/charts/c3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 06:23:00 GMT -->
+</body></html>

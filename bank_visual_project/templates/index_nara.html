@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+#=======================================================
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports2" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                      <!--------------------  --------------------------------------------->
+                      <div class="carousel-item active">
+                        <div class="row">
+
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">하나은행</p>
+                            </div>
+                            </div>
+                          <div class="col-md-12">
+                            <div class="row">
+                            <div class="table-responsive pt-3">
+
+                              <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+
+                                    <th>
+                                      제목
+                                    </th>
+                                    <th>
+                                      날짜
+                                    </th>
+
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+
+                                        {%  for v in MY_NEWS_HANA %}
+                                        <tr>
+                                            <td>{{v[1]}}</td>
+                                            <td>{{v[2]}}</td>
+                                        </tr>
+                                        {% endfor %}
+
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--------------------  --------------------------------------------->
+                      <div class="carousel-item">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">우리은행</p>
+                            </div>
+                            </div>
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-12 border-right">
+                                <div class="table-responsive pt-3">
+                                <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+
+                                    <th>
+                                      제목
+                                    </th>
+                                    <th>
+                                      날짜
+                                    </th>
+
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+
+                                        {%  for v in 총자산 %}
+                                        <tr>
+                                            <td>{{v[1]}}</td>
+                                            <td>{{v[2]}}</td>
+                                            <td>{{v[3]}}</td>
+                                        </tr>
+                                        {% endfor %}
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                                  <---------페이지--------->
+                                  <br>
+                                  <div class="row">
+    <div class="col-sm-12 col-md-5">
+      <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-7">
+      <div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination">
+        <li class="paginate_button page-item previous disabled" id="example_previous">
+          <a href="#" aria-controls="example" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+        </li>
+        <li class="paginate_button page-item active"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+        </li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+        </li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+        </li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="4" tabindex="0" class="page-link">4</a>
+        </li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="5" tabindex="0" class="page-link">5</a>
+        </li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="6" tabindex="0" class="page-link">6</a>
+        </li>
+        <li class="paginate_button page-item next" id="example_next"><a href="#" aria-controls="example" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+                                    <-------페이지---->
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+#================================================================
+
+</body>
+</html>

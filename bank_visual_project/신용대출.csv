@@ -1,0 +1,17 @@
+은행,종류,상품명,상품설명,한도,이자율,url
+국민,신용대출,KB 급여이체신용대출,KB로 급여 받으면 우대받는,150,4.29,https://obank.kbstar.com/quics?page=C103429&cc=b104363:b104516&isNew=N&prcode=LN20000030&QSL=F
+국민,신용대출,KB 처음EASY 신용대출,"사회초년생, 주부 등을 위한",10,5.12,https://obank.kbstar.com/quics?page=C103429&cc=b104363:b104516&isNew=N&prcode=LN20001318&QSL=F
+국민,신용대출,KB 직장인든든 신용대출(군인),군인 고객님을 위한,300,3.8,https://obank.kbstar.com/quics?page=C103429&cc=b104363:b104516&isNew=N&prcode=LN20000162&QSL=F
+국민,신용대출,KB 직장인든든 신용대출,직장인이라면,300,3.73,https://obank.kbstar.com/quics?page=C103429&cc=b104363:b104516&isNew=N&prcode=LN20000159&QSL=F
+신한,신용대출,쏠편한 직장인 대출,바쁜 직장인을 위해 서류제출을 생략한 빠른 직장인 신용대출,50,4.71,https://bank.shinhan.com/index.jsp#020300000000
+신한,신용대출,샐러리론,신한은행 급여이체 고객을 위한 특별한 대출 서비스,50,4.21,https://bank.shinhan.com/index.jsp#020300000000
+신한,신용대출,쏠편한 군인 대출,나라를 지키는 고마운 군인을 위해 언제 어디서나 가능한 모바일 신용대출,150,3.83,https://bank.shinhan.com/index.jsp#020300000000
+신한,신용대출,쏠편한 포켓론,신용카드를 보유 중인 개인 대상,5,4.19,https://bank.shinhan.com/index.jsp#020300000000
+우리,신용대출,우리 주거래 직장인대출(인터넷뱅킹),직장인을 위한 신용대출,200,3.55,https://spot.wooribank.com/pot/Dream?withyou=POLON0060&cc=c010528:c010531;c012425:c012399&PRD_CD=P020000054&PRD_YN=Y
+우리,신용대출,우리 첫급여 신용대출,새내기 직장인 고객님을 위한 신용대출,80,4.45,https://spot.wooribank.com/pot/Dream?withyou=POLON0060&cc=c010528:c010531;c012425:c012399&PLM_PDCD=P020006200&PRD_CD=P020006200&HOST_PRD_CD=2001163000000
+우리,신용대출,우리 비상금대출,통신정보를 활용한 신개념 비상금 대출,3,5.76,https://spot.wooribank.com/pot/Dream?withyou=POLON0060&cc=c010528:c010531;c012425:c012399&PLM_PDCD=P020006123&PRD_CD=P020006123&HOST_PRD_CD=2071306110000
+우리,신용대출,우리 WON하는 직장인대출 (갈아타기),다른은행 대출 비교하고 갈아타기,100,3.8,https://spot.wooribank.com/pot/Dream?withyou=POLON0060&cc=c010528:c010531;c012425:c012399&PLM_PDCD=P020006165&PRD_CD=P020006165&HOST_PRD_CD=2001162010000
+하나,신용대출,AI대출,1분이면 한도조회 OK!,50,4.15,https://www.kebhana.com/cont/mall/mall08/mall0802/mall080204/1474883_115200.jsp?_menuNo=98786
+하나,신용대출,군인생활안정자금대출,대한민국을 수호하고 계시는 국군 손님을 위한 신용대출 상품,80,5.82,https://www.kebhana.com/cont/mall/mall08/mall0802/mall080204/1420257_115200.jsp?_menuNo=98786
+하나,신용대출,급여통장플러스론,하나은행으로 3개월이상 급여이체 손님,100,5.79,https://www.kebhana.com/cont/mall/mall08/mall0802/mall080204/1445223_115200.jsp?_menuNo=98786
+하나,신용대출,핀크생활비대출,급전이 필요할때 최대 5백만원까지,5,3.91,https://www.kebhana.com/cont/mall/mall08/mall0802/mall080204/1472605_115200.jsp?_menuNo=98786

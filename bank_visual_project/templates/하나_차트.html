@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<!----원화 차트--->
+
+  var c3LineChart = c3.generate({
+    bindto: '#bank_line',
+    data: {
+      labels : ['년도'  , 2016 , 2017 , 2018 , 2019 , 2020] ,
+      columns: [
+        ['예수금추이', 6.67, 5.00, 5.92, 10.46, 5.43],
+        ['대출금추이', 4.17, 6.78, 7.20, 7.81, 7.61]
+      ]
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+
+<!------수익성 차트------->
+
+  var c3PieChart = c3.generate({
+    bindto: '#bank_pie',
+    data: {
+
+      columns: [
+        ['국민', 2,237,242],
+        ['신한', 1,745,592],
+        ['우리' , 1,390,636],
+        ['하나' , 1,916,248],
+      ],
+      type: 'pie',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: [ 'rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', '#A7B3FD' , 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+<!---------건전성 차트---->
+
+  var shinhan_bar = c3.generate({
+    bindto: '#bank_bar',
+    data: {
+      labels: ['년도','2016', '2017', '2018', '2019', '2020'],
+      columns: [
+        ['고정이하여신비율' , 0.84, 0.66 , 0.52 , 0.39 , 0.34],
+        ['BIS'  ,  0.1598, 0.1611 , 0.1625 ,  0.1611 , 0.1473]
+      ],
+      type: 'bar'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', '#006A67', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    bar: {
+      width: {
+        ratio: 0.7 // this makes bar width 50% of length between ticks
+      }
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

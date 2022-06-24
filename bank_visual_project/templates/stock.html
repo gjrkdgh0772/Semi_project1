@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+
+<style type="text/css">
+	.table{
+		border-collapse : "collapse"
+	}
+	th {
+		background-color : "lightgray"
+	}
+</style>
+
+
+</head>
+<body>
+
+
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports4" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+                      <!--------------------  --------------------------------------------->
+                      <div class="carousel-item">
+                        <div class="row">
+                          <div class="card-body">
+                                <h4 class="card-title">{{s_production}} 상품 정보</h4>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-borderless">
+                      <thead>
+                        <tr>
+							<th>은행</th>
+							<th>상품명</th>
+							<th>상품설명</th>
+							<th>이자율</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+							{% for item in S_list %}
+						<tr>
+							<td class="font-weight-medium"><div class="badge badge-success">{{item[1]}}</div></td>
+							<td class="font-weight-medium"><div class="badge badge-success">{{item[2]}}</div></td>
+							<td><div onclick="location.href='{{item[5]}}'" style="cursor:pointer;">{{item[3]}}</td>
+							<td><div onclick="location.href='{{item[5]}}'" style="cursor:pointer;">{{item[4]}}</td>
+						</tr>
+							{% endfor %}
+
+                      </tbody>
+
+
+
+                    </table>
+                      </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+</body>
+</html>

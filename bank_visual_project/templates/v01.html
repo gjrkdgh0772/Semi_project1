@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/charts/c3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 06:22:58 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="static/vendors/feather/feather.css">
+  <link rel="stylesheet" href="static/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="static/vendors/c3/c3.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="static/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="static/images/favicon.png" />
+</head>
+
+<body class="sidebar-dark">
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <a class="navbar-brand brand-logo me-5" href="../../index.html"><img src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-light.svg" class="me-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+              <a href="/backpage"><img src="static/images/faces/home.png" alt="profile"/></a>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options selected" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles light"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">build a js based app</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 ps-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="static/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../widgets/widgets.html">
+              <i class="icon-cog menu-icon"></i>
+              <span class="menu-title">Widgets</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">UI Elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/accordions.html">Accordions</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/buttons.html">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/badges.html">Badges</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/breadcrumbs.html">Breadcrumbs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/modals.html">Modals</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/progress.html">Progress bar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/pagination.html">Pagination</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/tabs.html">Tabs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/tooltips.html">Tooltips</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+              <i class="icon-image menu-icon"></i>
+              <span class="menu-title">Advanced UI</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/dragula.html">Dragula</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/clipboard.html">Clipboard</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/context-menu.html">Context menu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/slider.html">Sliders</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/carousel.html">Carousel</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/colcade.html">Colcade</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/loaders.html">Loaders</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Form elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../forms/basic_elements.html">Basic Elements</a></li>                
+                <li class="nav-item"><a class="nav-link" href="../forms/advanced_elements.html">Advanced Elements</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/validation.html">Validation</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/wizard.html">Wizard</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
+              <i class="icon-loader menu-icon"></i>
+              <span class="menu-title">Editors</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="editors">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../forms/text_editor.html">Text editors</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/code_editor.html">Code editors</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="chartjs.html">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="morris.html">Morris</a></li>
+                <li class="nav-item"> <a class="nav-link" href="flot-chart.html">Flot</a></li>
+                <li class="nav-item"> <a class="nav-link" href="google-charts.html">Google charts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="sparkline.html">Sparkline js</a></li>
+                <li class="nav-item"> <a class="nav-link" href="c3.html">C3 charts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="chartist.html">Chartists</a></li>
+                <li class="nav-item"> <a class="nav-link" href="justGage.html">JustGage</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Tables</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/data-table.html">Data table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/js-grid.html">Js-grid</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/sortable-table.html">Sortable table</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ui-features/popups.html">
+              <i class="icon-open menu-icon"></i>
+              <span class="menu-title">Popups</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ui-features/notifications.html">
+              <i class="icon-esc menu-icon"></i>
+              <span class="menu-title">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Icons</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../icons/flag-icons.html">Flag icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/mdi.html">Mdi icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/font-awesome.html">Font Awesome</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/simple-line-icon.html">Simple line icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/themify.html">Themify icons</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#maps" aria-expanded="false" aria-controls="maps">
+              <i class="icon-map menu-icon"></i>
+              <span class="menu-title">Maps</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="maps">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../maps/mapael.html">Mapael</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../maps/vector-map.html">Vector Map</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../maps/google-maps.html">Google Map</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/login-2.html"> Login 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/register-2.html"> Register 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/lock-screen.html"> Lockscreen </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Error pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">General Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="general-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/blank-page.html"> Blank Page </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/profile.html"> Profile </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/faq.html"> FAQ </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/faq-2.html"> FAQ 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/news-grid.html"> News grid </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/timeline.html"> Timeline </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/search-results.html"> Search Results </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/portfolio.html"> Portfolio </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#e-commerce" aria-expanded="false" aria-controls="e-commerce">
+              <i class="icon-tag menu-icon"></i>
+              <span class="menu-title">E-commerce</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="e-commerce">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/invoice.html"> Invoice </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/pricing-table.html"> Pricing Table </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/orders.html"> Orders </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/email.html">
+              <i class="icon-mail menu-icon"></i>
+              <span class="menu-title">E-mail</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/calendar.html">
+              <i class="icon-watch menu-icon"></i>
+              <span class="menu-title">Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/todo.html">
+              <i class="icon-align-right menu-icon"></i>
+              <span class="menu-title">Todo List</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/gallery.html">
+              <i class="icon-image menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">정형 데이터</h4>
+                  <div id="c3-line-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">건전성 chart</h4>
+                  <div id="c3-donut-chart" class="c3" style="max-height: 319.969px; position: relative;"><svg width="624.731201171875" height="319.969" style="overflow: hidden;"><defs><clipPath id="c3-1645153146052-clip"><rect width="624.731201171875" height="265.969"></rect></clipPath><clipPath id="c3-1645153146052-clip-xaxis"><rect x="-31" y="-20" width="686.731201171875" height="70"></rect></clipPath><clipPath id="c3-1645153146052-clip-yaxis"><rect x="-29" y="-4" width="20" height="289.969"></rect></clipPath><clipPath id="c3-1645153146052-clip-grid"><rect width="624.731201171875" height="265.969"></rect></clipPath><clipPath id="c3-1645153146052-clip-subchart"><rect width="624.731201171875" height="0"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="312.3656005859375" y="132.9845" style="opacity: 0;"></text><g clip-path="url(http://127.0.0.1:5000/gopage#c3-1645153146052-clip)" class="c3-regions" style="visibility: hidden;"></g><g clip-path="url(http://127.0.0.1:5000/gopage#c3-1645153146052-clip-grid)" class="c3-grid" style="visibility: hidden;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="265.969" style="visibility: hidden;"></line></g></g><g clip-path="url(http://127.0.0.1:5000/gopage#c3-1645153146052-clip)" class="c3-chart"><g class="c3-stanford-elements"><g class="c3-stanford-lines" style="shape-rendering: geometricprecision;"></g><g class="c3-stanford-texts"></g><g class="c3-stanford-regions"></g></g><g class="c3-event-rects" style="fill-opacity: 0;"><rect class="c3-event-rect" x="0" y="0" width="624.731201171875" height="265.969"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-setosa" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-setosa c3-bars c3-bars-setosa" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-versicolor" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-versicolor c3-bars c3-bars-versicolor" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-virginica" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-virginica c3-bars c3-bars-virginica" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-setosa" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-setosa c3-lines c3-lines-setosa"></g><g class=" c3-shapes c3-shapes-setosa c3-areas c3-areas-setosa"></g><g class=" c3-selected-circles c3-selected-circles-setosa"></g><g class=" c3-shapes c3-shapes-setosa c3-circles c3-circles-setosa" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-versicolor" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-versicolor c3-lines c3-lines-versicolor"></g><g class=" c3-shapes c3-shapes-versicolor c3-areas c3-areas-versicolor"></g><g class=" c3-selected-circles c3-selected-circles-versicolor"></g><g class=" c3-shapes c3-shapes-versicolor c3-circles c3-circles-versicolor" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-virginica" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-virginica c3-lines c3-lines-virginica"></g><g class=" c3-shapes c3-shapes-virginica c3-areas c3-areas-virginica"></g><g class=" c3-selected-circles c3-selected-circles-virginica"></g><g class=" c3-shapes c3-shapes-virginica c3-circles c3-circles-virginica" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(312.3656005859375,127.9845)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 1;">Iris Petal Width</text><g class="c3-chart-arc c3-target c3-target-setosa"><g class=" c3-shapes c3-shapes-setosa c3-arcs c3-arcs-setosa"><path class=" c3-shape c3-shape c3-arc c3-arc-setosa" transform="" style="fill: rgba(237, 28, 36, 0.6); cursor: pointer;" d="M-50.63999706099685,-110.53763971827811A121.585275,121.585275,0,0,1,-1.3032427008613523e-13,-121.585275L-7.819456205168114e-14,-72.95116499999999A72.95116499999999,72.95116499999999,0,0,0,-30.383998236598107,-66.32258383096686Z"></path></g><text dy=".35em" style="opacity: 1; text-anchor: middle; pointer-events: none;" class="" transform="translate(-20.732426959353187,-95.03301055077381)">6.8%</text></g><g class="c3-chart-arc c3-target c3-target-versicolor"><g class=" c3-shapes c3-shapes-versicolor c3-arcs c3-arcs-versicolor"><path class=" c3-shape c3-shape c3-arc c3-arc-versicolor" transform="" style="fill: rgb(88, 216, 163); cursor: pointer;" d="M-46.94519343970735,112.15671138961807A121.585275,121.585275,0,0,1,-50.63999706099685,-110.53763971827811L-30.383998236598107,-66.32258383096686A72.95116499999999,72.95116499999999,0,0,0,-28.16711606382441,67.29402683377083Z"></path></g><text dy=".35em" style="opacity: 1; text-anchor: middle; pointer-events: none;" class="" transform="translate(-97.25483508426771,1.6135906235141304)">36.9%</text></g><g class="c3-chart-arc c3-target c3-target-virginica"><g class=" c3-shapes c3-shapes-virginica c3-arcs c3-arcs-virginica"><path class=" c3-shape c3-shape c3-arc c3-arc-virginica" transform="" style="fill: rgba(4, 189, 254, 0.6); cursor: pointer;" d="M7.444950892610036e-15,-121.585275A121.585275,121.585275,0,1,1,-46.94519343970735,112.15671138961807L-28.16711606382441,67.29402683377083A72.95116499999999,72.95116499999999,0,1,0,4.46697053556602e-15,-72.95116499999999Z"></path></g><text dy=".35em" style="opacity: 1; text-anchor: middle; pointer-events: none;" class="" transform="translate(95.36386518043902,19.153063457720016)">56.3%</text></g></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-setosa" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-setosa"></g></g><g class="c3-chart-text c3-target c3-target-versicolor" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-versicolor"></g></g><g class="c3-chart-text c3-target c3-target-virginica" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-virginica"></g></g></g></g><g clip-path="url(http://127.0.0.1:5000/gopage#c3-1645153146052-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://127.0.0.1:5000/gopage#c3-1645153146052-clip-xaxis)" transform="translate(0,265.969)" style="visibility: visible; opacity: 0;"><text class="c3-axis-x-label" transform="" style="text-anchor: end;" x="624.731201171875" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(7, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><g class="tick" transform="translate(19, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">1</tspan></text></g><g class="tick" transform="translate(32, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">2</tspan></text></g><g class="tick" transform="translate(44, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">3</tspan></text></g><g class="tick" transform="translate(57, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">4</tspan></text></g><g class="tick" transform="translate(69, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">5</tspan></text></g><g class="tick" transform="translate(82, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">6</tspan></text></g><g class="tick" transform="translate(94, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">7</tspan></text></g><g class="tick" transform="translate(107, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">8</tspan></text></g><g class="tick" transform="translate(119, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">9</tspan></text></g><g class="tick" transform="translate(132, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">10</tspan></text></g><g class="tick" transform="translate(144, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">11</tspan></text></g><g class="tick" transform="translate(157, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">12</tspan></text></g><g class="tick" transform="translate(169, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">13</tspan></text></g><g class="tick" transform="translate(182, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">14</tspan></text></g><g class="tick" transform="translate(194, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">15</tspan></text></g><g class="tick" transform="translate(207, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">16</tspan></text></g><g class="tick" transform="translate(219, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">17</tspan></text></g><g class="tick" transform="translate(232, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">18</tspan></text></g><g class="tick" transform="translate(244, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">19</tspan></text></g><g class="tick" transform="translate(257, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">20</tspan></text></g><g class="tick" transform="translate(269, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">21</tspan></text></g><g class="tick" transform="translate(282, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">22</tspan></text></g><g class="tick" transform="translate(294, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">23</tspan></text></g><g class="tick" transform="translate(307, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">24</tspan></text></g><g class="tick" transform="translate(319, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">25</tspan></text></g><g class="tick" transform="translate(332, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">26</tspan></text></g><g class="tick" transform="translate(344, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">27</tspan></text></g><g class="tick" transform="translate(357, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">28</tspan></text></g><g class="tick" transform="translate(369, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">29</tspan></text></g><g class="tick" transform="translate(382, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">30</tspan></text></g><g class="tick" transform="translate(394, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">31</tspan></text></g><g class="tick" transform="translate(407, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">32</tspan></text></g><g class="tick" transform="translate(419, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">33</tspan></text></g><g class="tick" transform="translate(432, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">34</tspan></text></g><g class="tick" transform="translate(444, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">35</tspan></text></g><g class="tick" transform="translate(457, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">36</tspan></text></g><g class="tick" transform="translate(469, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">37</tspan></text></g><g class="tick" transform="translate(482, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">38</tspan></text></g><g class="tick" transform="translate(494, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">39</tspan></text></g><g class="tick" transform="translate(507, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">40</tspan></text></g><g class="tick" transform="translate(519, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">41</tspan></text></g><g class="tick" transform="translate(532, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">42</tspan></text></g><g class="tick" transform="translate(544, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">43</tspan></text></g><g class="tick" transform="translate(557, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">44</tspan></text></g><g class="tick" transform="translate(569, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">45</tspan></text></g><g class="tick" transform="translate(582, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">46</tspan></text></g><g class="tick" transform="translate(594, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">47</tspan></text></g><g class="tick" transform="translate(607, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">48</tspan></text></g><g class="tick" transform="translate(619, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: none;"><tspan x="0" dy=".71em" dx="0">49</tspan></text></g><path class="domain" d="M0,6V0H624.731201171875V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://127.0.0.1:5000/gopage#c3-1645153146052-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 0;"><text class="c3-axis-y-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="1.2em"></text><g class="tick" transform="translate(0, 254)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0, 235)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0, 217)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0, 198)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0, 180)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0, 162)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1</tspan></text></g><g class="tick" transform="translate(0, 143)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1.2</tspan></text></g><g class="tick" transform="translate(0, 125)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1.4</tspan></text></g><g class="tick" transform="translate(0, 106)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1.6</tspan></text></g><g class="tick" transform="translate(0, 88)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1.8</tspan></text></g><g class="tick" transform="translate(0, 70)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">2</tspan></text></g><g class="tick" transform="translate(0, 51)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">2.2</tspan></text></g><g class="tick" transform="translate(0, 33)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">2.4</tspan></text></g><g class="tick" transform="translate(0, 14)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">2.6</tspan></text></g><path class="domain" d="M-6,1H0V265.969H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(624.731201171875,0)" style="visibility: hidden; opacity: 0;"><text class="c3-axis-y2-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(0,266)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,240)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,213)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,187)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,160)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,134)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,107)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,81)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,54)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,28)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V265.969H6"></path></g></g><g transform="translate(0,299.969)"><g class="c3-legend-item c3-legend-item-setosa" style="visibility: visible; cursor: pointer; opacity: 1;"><text x="226.8454875946045" y="9" style="pointer-events: none;">setosa</text><rect class="c3-legend-item-event" x="212.8454875946045" y="-5" style="fill-opacity: 0;" width="59.29374694824219" height="19.59999942779541"></rect><line class="c3-legend-item-tile" x1="210.8454875946045" y1="4" x2="220.8454875946045" y2="4" stroke-width="10" style="stroke: rgba(237, 28, 36, 0.6); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-versicolor" style="visibility: visible; cursor: pointer; opacity: 1;"><text x="286.1392345428467" y="9" style="pointer-events: none;">versicolor</text><rect class="c3-legend-item-event" x="272.1392345428467" y="-5" style="fill-opacity: 0;" width="78.67773056030273" height="19.59999942779541"></rect><line class="c3-legend-item-tile" x1="270.1392345428467" y1="4" x2="280.1392345428467" y2="4" stroke-width="10" style="stroke: rgb(88, 216, 163); pointer-events: none;"></line></g><g class="c3-legend-item c3-legend-item-virginica" style="visibility: visible; cursor: pointer; opacity: 1;"><text x="364.8169651031494" y="9" style="pointer-events: none;">virginica</text><rect class="c3-legend-item-event" x="350.8169651031494" y="-5" style="fill-opacity: 0;" width="61.068748474121094" height="19.59999942779541"></rect><line class="c3-legend-item-tile" x1="348.8169651031494" y1="4" x2="358.8169651031494" y2="4" stroke-width="10" style="stroke: rgba(4, 189, 254, 0.6); pointer-events: none;"></line></g></g><text class="c3-title" x="312.3656005859375" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none; top: 82.45px; left: 207.825px;"><table class="c3-tooltip"><tbody><tr class="c3-tooltip-name--versicolor"><td class="name"><span style="background-color:rgba(88,216,163,1)"></span>versicolor</td><td class="value">36.9%</td></tr></tbody></table></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+
+
+
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+
+
+                <div class="card-body">
+                   <div id="다음버튼" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                 <div class="carousel-item active">
+<!--                  <h4 class="card-title">SNS</h4>-->
+                   <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+
+
+<!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+                   </div>
+
+
+
+                 <div class="carousel-item">
+<!--                  <h4 class="card-title">SNS</h4>-->
+                   <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+
+
+<!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+                   </div>
+
+
+
+                 <div class="carousel-item">
+<!--                  <h4 class="card-title">SNS</h4>-->
+                   <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+
+
+<!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+                   </div>
+
+
+
+                      <a class="carousel-control-prev" href="#다음버튼" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                      </a>
+                      <a class="carousel-control-next" href="#다음버튼" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </a>
+
+                      </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="card-body">
+<!--                   <div id="다음버튼1" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">-->
+<!--                    <div class="carousel-inner">-->
+
+
+<!--                 <div class="carousel-item">-->
+                  <div class = "template-demo">
+                    <h6></h6>
+                  <h6>전체조회수</h6>
+                  <h6>전체게시물수</h6>
+                  <h6>구독자</h6>
+                    <h6></h6>
+                  </div>
+<!--                   <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+
+
+<!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+<!--                   </div>-->
+
+
+
+<!--                 <div class="carousel-item">-->
+<!--                  <h4 class="card-title">SNS</h4>-->
+<!--                   <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+
+
+<!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+<!--                   </div>-->
+
+
+
+<!--                 <div class="carousel-item active">-->
+<!--                  <h4 class="card-title">SNS</h4>-->
+<!--                   <button type="button" class="btn btn-social-icon-text btn-youtube"><i class="ti-youtube"></i>Youtube</button>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+<!--                    <br>-->
+
+
+<!--                   <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-facebook"></i>Facebook</button>-->
+<!--                   </div>-->
+
+
+
+<!--                      <a class="carousel-control-prev" href="#다음버튼1" role="button" data-bs-slide="prev">-->
+<!--                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+
+<!--                      </a>-->
+<!--                      <a class="carousel-control-next" href="#다음버튼1" role="button" data-bs-slide="next">-->
+<!--                      <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                      </a>-->
+
+<!--                      </div>-->
+<!--                  </div>-->
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">WORDCLOUD</h4>
+                    <center><img src = "/static/images/faces/국민은행키워드.png" alt="user" width="400" height="300"></center>
+<!--                  <div id="c3-bar-chart"></div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ms-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="static/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="static/vendors/d3/d3.min.js"></script>
+  <script src="static/vendors/c3/c3.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="static/js/off-canvas.js"></script>
+  <script src="static/js/hoverable-collapse.js"></script>
+  <script src="static/js/template.js"></script>
+  <script src="static/js/settings.js"></script>
+  <script src="static/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="static/js/c3.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/charts/c3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 06:23:00 GMT -->
+</html>

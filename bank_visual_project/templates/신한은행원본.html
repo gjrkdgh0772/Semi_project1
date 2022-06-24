@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/charts/c3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 06:22:58 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="static/vendors/feather/feather.css">
+  <link rel="stylesheet" href="static/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="static/vendors/c3/c3.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="static/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="static/images/favicon.png" />
+</head>
+
+<body class="sidebar-dark">
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <a class="navbar-brand brand-logo me-5" href="../../index.html"><img src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-light.svg" class="me-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="https://www.bootstrapdash.com/demo/skydash/template/images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+              <a href="/backpage"><img src="static/images/faces/home.png" alt="profile"/></a>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options selected" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles light"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">build a js based app</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary me-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 ps-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="static/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="static/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../widgets/widgets.html">
+              <i class="icon-cog menu-icon"></i>
+              <span class="menu-title">Widgets</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">UI Elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/accordions.html">Accordions</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/buttons.html">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/badges.html">Badges</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/breadcrumbs.html">Breadcrumbs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/modals.html">Modals</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/progress.html">Progress bar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/pagination.html">Pagination</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/tabs.html">Tabs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/tooltips.html">Tooltips</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+              <i class="icon-image menu-icon"></i>
+              <span class="menu-title">Advanced UI</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/dragula.html">Dragula</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/clipboard.html">Clipboard</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/context-menu.html">Context menu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/slider.html">Sliders</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/carousel.html">Carousel</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/colcade.html">Colcade</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../ui-features/loaders.html">Loaders</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Form elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../forms/basic_elements.html">Basic Elements</a></li>                
+                <li class="nav-item"><a class="nav-link" href="../forms/advanced_elements.html">Advanced Elements</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/validation.html">Validation</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/wizard.html">Wizard</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
+              <i class="icon-loader menu-icon"></i>
+              <span class="menu-title">Editors</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="editors">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../forms/text_editor.html">Text editors</a></li>
+                <li class="nav-item"><a class="nav-link" href="../forms/code_editor.html">Code editors</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="chartjs.html">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="morris.html">Morris</a></li>
+                <li class="nav-item"> <a class="nav-link" href="flot-chart.html">Flot</a></li>
+                <li class="nav-item"> <a class="nav-link" href="google-charts.html">Google charts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="sparkline.html">Sparkline js</a></li>
+                <li class="nav-item"> <a class="nav-link" href="c3.html">C3 charts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="chartist.html">Chartists</a></li>
+                <li class="nav-item"> <a class="nav-link" href="justGage.html">JustGage</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Tables</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/data-table.html">Data table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/js-grid.html">Js-grid</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../tables/sortable-table.html">Sortable table</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ui-features/popups.html">
+              <i class="icon-open menu-icon"></i>
+              <span class="menu-title">Popups</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ui-features/notifications.html">
+              <i class="icon-esc menu-icon"></i>
+              <span class="menu-title">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Icons</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../icons/flag-icons.html">Flag icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/mdi.html">Mdi icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/font-awesome.html">Font Awesome</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/simple-line-icon.html">Simple line icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../icons/themify.html">Themify icons</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#maps" aria-expanded="false" aria-controls="maps">
+              <i class="icon-map menu-icon"></i>
+              <span class="menu-title">Maps</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="maps">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../maps/mapael.html">Mapael</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../maps/vector-map.html">Vector Map</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../maps/google-maps.html">Google Map</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/login-2.html"> Login 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/register-2.html"> Register 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/lock-screen.html"> Lockscreen </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Error pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">General Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="general-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/blank-page.html"> Blank Page </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/profile.html"> Profile </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/faq.html"> FAQ </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/faq-2.html"> FAQ 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/news-grid.html"> News grid </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/timeline.html"> Timeline </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/search-results.html"> Search Results </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/portfolio.html"> Portfolio </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#e-commerce" aria-expanded="false" aria-controls="e-commerce">
+              <i class="icon-tag menu-icon"></i>
+              <span class="menu-title">E-commerce</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="e-commerce">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../samples/invoice.html"> Invoice </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/pricing-table.html"> Pricing Table </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../samples/orders.html"> Orders </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/email.html">
+              <i class="icon-mail menu-icon"></i>
+              <span class="menu-title">E-mail</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/calendar.html">
+              <i class="icon-watch menu-icon"></i>
+              <span class="menu-title">Calendar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/todo.html">
+              <i class="icon-align-right menu-icon"></i>
+              <span class="menu-title">Todo List</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../apps/gallery.html">
+              <i class="icon-image menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div id="다음버튼2" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+
+
+                      <div class="carousel-item active">
+                        <br>
+                  <h4 class="card-title">원화 지표</h4>
+                        </br>
+                  <div id="c3-line-chart2"></div>
+                        </div>
+
+                      <div class="carousel-item">
+                         <br>
+                  <h4 class="card-title">수익성 지표</h4>
+                         </br>
+                  <div id="c3-pie-chart2"></div>
+                        </div>
+
+                      <div class="carousel-item">
+                         <br>
+                  <h4 class="card-title">건전성 지표</h4>
+                         </br>
+                  <div id="shinhan_bar_chart2"></div>
+                        </div>
+
+
+                      <div class="carousel-item">
+                         <br>
+                        <h4 class="card-title">신한은행 지표</h4>
+                         </br>
+                  <center><img src="/static/images/faces/신한.png" alt="user" class="img-thumbnail border-dark" width="300" height="200"></center>
+
+                        </div>
+
+
+                      <div class="carousel-item">
+                         <br>
+                        <h4 class="card-title">종합 지표</h4>
+                         </br>
+                  <center><img src="/static/images/faces/radar_total.png" alt="user" class="img-thumbnail border-dark" width="300" height="200"></center>
+
+                        </div>
+
+
+                      <a class="carousel-control-prev" href="#다음버튼2" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                    </a>
+                    <a class="carousel-control-next" href="#다음버튼2" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                   <br>
+                  <h4 class="card-title">은행 모바일 뱅킹 앱 이용자비율</h4>
+                   </br>
+
+                  <div id="shinhan-donut-chart"></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="row">
+
+
+
+           <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+
+
+                <div class="card-body">
+                  <a href = 'https://www.youtube.com/channel/UC4E394G9WuS9y6SlBZslMsQ' >
+                  <button type="button" class="btn btn-social-icon-text btn-youtube">
+                    <i class="ti-youtube"></i>Youtube</button>
+                   <div id="다음버튼" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <br></br>
+                      <br></br>
+
+                 <div class="carousel-item active">
+                   <div class="row">
+                     <div class="col-sm-4">
+                          <center><a href="https://www.youtube.com/watch?v=yTCh96otOF4">
+                            <img src="/static/images/faces/신한은행썸네일.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                          </a></center>
+                        <center><br><b><p class="text-dark">최대 14만원 먼저 받고 시작하자! 신한플러스 멤버십!</p></br></b></center>
+                        </div>
+
+                  <div class="col-sm-4">
+                          <center><a href="https://www.youtube.com/watch?v=W9kf4HTL8l4">
+                            <img src="/static/images/faces/신한은행썸네일2.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                          </a></center>
+                        <center><br><b><p class="text-dark">기업PR [생각. 이어지다, 행동으로] 30 ver</p></br></b></center>
+                        </div>
+                  <div class="col-sm-4">
+                          <center><a href="https://www.youtube.com/watch?v=wNK8ULBrl5Q">
+                            <img src="/static/images/faces/신한은행썸네일3.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                          </a></center>
+                        <center><br><b><p class="text-dark">너도 살고 나도 사는 우리 동네 배달앱 ‘땡겨요’ 론칭</p></br></b></center>
+                        </div>
+                     </div>
+                   </div>
+                 <div class="carousel-item">
+                   <div class="row">
+                     <div class="col-sm-4">
+                          <center><a href="https://www.youtube.com/watch?v=US5in7QOEcc">
+                            <img src="/static/images/faces/신한은행썸네일4.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                          </a></center>
+                        <center><br><b><p class="text-dark">신한은행 TV-CF, 기업PR 마음을 기울입니다</p></br></b></center>
+                        </div>
+                  <div class="col-sm-4">
+                          <center><a href="https://www.youtube.com/watch?v=Ky-1N6iRFxQ">
+                            <img src="/static/images/faces/신한은행썸네일5.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                          </a></center>
+                        <center><br><b><p class="text-dark">[단독공개] 혜택이 상상이상이상이 급여클럽 X 이상이</p></br></b></center>
+                        </div>
+                  <div class="col-sm-4">
+                          <center><a href="https://www.youtube.com/watch?v=iVmb7XTmD1o">
+                            <img src="/static/images/faces/신한은행썸네일6.webp" alt="user" class="img-thumbnail border-dark" width="200" height="250">
+                          </a></center>
+                    <center><br><b><p class="text-dark">신한은행 마이데이터 서비스 '머니버스' 런칭 광고</p></br></b></center>
+                        </div>
+                     </div>
+                   </div>
+
+                      <a class="carousel-control-prev" href="#다음버튼" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                      </a>
+                      <a class="carousel-control-next" href="#다음버튼" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </a>
+
+                      </div>
+                  </div>
+
+                   <div class="row">
+                      <div class="col-lg-12">
+                            <button type="button" class="btn btn-social-icon-text btn-facebook"><i class="ti-dribbble"></i>홈페이지 & SNS</button>
+<!--                              <br></br>-->
+                        <div class="card">
+
+                          <div class="card-body">
+
+
+
+                            <div id="video-gallery" class="row lightGallery">
+                              <a class="col-sm-3" href="https://www.shinhan.com/index.jsp">
+                                <img src="/static/images/faces/신한sb.png" alt="image" class="img-thumbnail border-info" width="70" height="60" >
+
+                              </a>
+                              <a class="col-sm-3" href="https://www.facebook.com/ShinhanBank/">
+                                <img src="/static/images/faces/페이스북.png" alt="image" width="60" height="60">
+
+                              </a>
+                              <a class="col-sm-3" href="https://www.instagram.com/shinhanbank_official/">
+                                <img src="/static/images/faces/인스타그램.png" alt="image" width="60" height="60">
+
+                              </a>
+                              <a class="col-sm-3" href="https://shinhanblog.com/643">
+                                <img src="/static/images/faces/블로그.png" alt="image" width="60" height="60">
+
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+              </div>
+                      </div>
+                        </div>
+                      </div>
+
+
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+<!--                  <h4 class="card-title">WORDCLOUD</h4>-->
+                    <center><img src = "/static/images/faces/신한은행키워드.png" alt="user" ></center>
+<!--                  <div id="c3-bar-chart"></div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ms-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="static/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="static/vendors/d3/d3.min.js"></script>
+  <script src="static/vendors/c3/c3.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+
+
+  <script src="static/js/off-canvas.js"></script>
+  <script src="static/js/hoverable-collapse.js"></script>
+  <script src="static/js/template.js"></script>
+  <script src="static/js/settings.js"></script>
+  <script src="static/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+<!--  <script src="static/js/c3.js"></script>-->
+  <!-- End custom js for this page-->
+      <script>(function($) {
+  'use strict';
+  var c3LineChart = c3.generate({
+    bindto: '#c3-line-chart2',
+
+    data: {
+
+      x : '년도',
+      columns: [
+        ['년도' ,2016 , 2017 , 2018 , 2019 , 2020 ],
+        ['예수금추이', 4.64, 5.52, 2.62, 11.83, 8.02],
+        ['대출금추이', 4.19, 5.92, 7.19, 7.36, 7.68]
+      ]
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+  var c3PieChart = c3.generate({
+    bindto: '#c3-pie-chart2',
+    data: {
+
+      columns: [
+        ['국민' , 2,237,242],
+        ['신한' , 1,745,592],
+        ['우리' , 1,390,636],
+        ['하나' , 1,916,248],
+      ],
+      type: 'pie',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: [ '#FAB813', '#135899', '#007BBE' , '#298478']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+
+  var c3StepChart = c3.generate({
+    bindto: '#c3-step-chart2',
+    data: {
+      columns: [
+        ['data1', 300, 350, 300, 0, 0, 100],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      types: {
+        data1: 'step',
+        data2: 'area-step'
+      }
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+
+   var shinhanchart5 = c3.generate({
+   bindto: '#c3-shinhan_고정이하여신비율',
+
+   data: {
+      labels: ['년도','2016', '2017', '2018', '2019', '2020'],
+      columns: [
+        ['신한_고정이하여신비율' , 0.79, 0.65 , 0.55 ,  0.45 , 0.36]
+      ]
+    }
+  });
+
+  var shinhanchart4 = c3.generate({
+   bindto: '#c3-shinhan_총자산',
+   data: {
+      columns: [
+        ['신한_총자산' , 269018149, 282819576, 302936552, 323875533, 364744341]
+      ]
+    }
+  });
+
+  var shinhan_bar = c3.generate({
+    bindto: '#shinhan_bar_chart2',
+    data: {
+      x : '년도' ,
+      columns: [
+        ['년도' ,2016 , 2017 , 2018 , 2019 , 2020 ],
+        ['고정이하여신비율' , 0.65, 0.55 , 0.45 ,  0.45 , 0.36],
+        ['BIS'  ,  0.1570, 0.1559 , 0.1603 ,  0.1591 , 0.1847]
+      ],
+      type: 'bar'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', '#006A67', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    bar: {
+      width: {
+        ratio: 0.7 // this makes bar width 50% of length between ticks
+      }
+    }
+  });
+
+
+
+new Chart(document.getElementById("radar-chart"), {
+    type: 'radar',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "1950",
+          fill: true,
+          backgroundColor: "rgba(179,181,198,0.2)",
+          borderColor: "rgba(179,181,198,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(179,181,198,1)",
+          data: [8.77,55.61,21.69,6.62,6.82]
+        }, {
+          label: "2050",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          data: [25.48,54.16,7.61,8.06,4.45]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Distribution in % of world population'
+      }
+    }
+});
+
+  var c3SplineChart = c3.generate({
+    bindto: '#c3-spline-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      type: 'spline'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(237,28,36,0.6)', 'rgba(4,189,254,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+  var c3BarChart = c3.generate({
+    bindto: '#c3-bar-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      type: 'bar'
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    bar: {
+      width: {
+        ratio: 0.7 // this makes bar width 50% of length between ticks
+      }
+    }
+  });
+
+  setTimeout(function() {
+    c3BarChart.load({
+      columns: [
+        ['data3', 130, -150, 200, 300, -200, 100]
+      ]
+    });
+  }, 1000);
+
+  var c3StepChart = c3.generate({
+    bindto: '#c3-step-chart',
+    data: {
+      columns: [
+        ['data1', 300, 350, 300, 0, 0, 100],
+        ['data2', 130, 100, 140, 200, 150, 50]
+      ],
+      types: {
+        data1: 'step',
+        data2: 'area-step'
+      }
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+  var c3PieChart = c3.generate({
+    bindto: '#c3-pie-chart',
+    data: {
+      // iris data from R
+      columns: [
+        ['data1', 30],
+        ['data2', 120],
+      ],
+      type: 'pie',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: ['#6153F9', '#8E97FC', '#A7B3FD']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    }
+  });
+
+  setTimeout(function() {
+    c3PieChart.load({
+      columns: [
+        ["Income", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
+        ["Outcome", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+        ["Revenue", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
+      ]
+    });
+  }, 1500);
+
+  setTimeout(function() {
+    c3PieChart.unload({
+      ids: 'data1'
+    });
+    c3PieChart.unload({
+      ids: 'data2'
+    });
+  }, 2500);
+  var c3DonutChart = c3.generate({
+    bindto: '#c3-donut-chart',
+    data: {
+      columns: [
+        ['data1', 30],
+        ['data2', 120],
+      ],
+      type: 'donut',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    donut: {
+      title: "Iris Petal Width"
+    }
+  });
+
+  setTimeout(function() {
+    c3DonutChart.load({
+      columns: [
+        ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
+        ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
+        ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
+      ]
+    });
+  }, 1500);
+
+  setTimeout(function() {
+    c3DonutChart.unload({
+      ids: 'data1'
+    });
+    c3DonutChart.unload({
+      ids: 'data2'
+    });
+  }, 2500);
+
+
+
+
+
+})(jQuery);</script>
+
+
+
+
+
+    <script>var c3DonutChart = c3.generate({
+    bindto: '#shinhan-donut-chart',
+    data: {
+      columns: [
+        ['신한은행앱이용자', 7944796],
+        ['국민', 51780000],
+
+      ],
+      type: 'donut',
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onmouseover: function(d, i) {
+        console.log("onmouseover", d, i);
+      },
+      onmouseout: function(d, i) {
+        console.log("onmouseout", d, i);
+      }
+    },
+    color: {
+      pattern: [ '#135899', '#808080','#FAB813', '#007BBE' , '#298478' ]
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 30,
+      left: 0,
+    },
+    donut: {
+      title: "이용자수비율"
+    }
+  });
+<!--9,263,888         7,944,796       5,230,918     2,934,000-->
+  setTimeout(function() {
+    c3DonutChart.load({
+      columns: [
+        ["국민은행", 9263888],
+
+        ["우리은행", 5230918],
+        ["하나은행", 2934000],
+      ]
+    });
+  }, 6000);
+
+  setTimeout(function() {
+    c3DonutChart.unload({
+      ids: '국민'
+    });
+    c3DonutChart.unload({
+      ids: 'data2'
+    });
+  }, 6000);
+</script>
+
+
+</body>
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/charts/c3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 06:23:00 GMT -->
+</html>
